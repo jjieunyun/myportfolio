@@ -1,0 +1,31 @@
+@value makerpink, makerMint, makerBrown from '../../common/colors.module.css';
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 70%;
+    height: 100vh;
+    z-index: -100;
+}
+
+.avatar {
+    position: absolute;
+    top: 28%;
+    left: 20%;
+    margin: 0;
+}
+
+.intro {
+    width: 500px;
+    position: relative;
+    top: 150px;
+    left: 50%;
+    white-space: normal;
+    word-wrap:break-word;
+    color: makerBrown;
+}
+
+.title {
+    font-size: 3rem;
+}

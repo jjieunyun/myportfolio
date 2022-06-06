@@ -1,0 +1,83 @@
+@value makerpink, makerMint, makerBrown from '../../common/colors.module.css';
+@value fontMenu '../../common/font.module.css';
+
+.navbar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid makerpink;
+    padding: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    color: makerMint;
+    text-decoration: none;
+    align-items: center;
+}
+
+.title > p {
+    margin: 0;
+    margin-left: 1.2rem;
+    text-shadow: -1px 0 makerBrown, 0 1.5px makerBrown, 1.5px 0 makerBrown, 0 -1px makerBrown;
+}
+
+
+.title:visited {
+    color: makerMint;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    
+}
+
+.navbar_menu {
+    display: flex;
+}
+
+.navbar_menu_item {
+    padding: 8px 12px;
+    margin: 0 3px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: 'Paytone One', sans-serif;
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
+
+    display: inline-block;
+    line-height: 1rem;
+    color: makerBrown;
+    position: relative;
+}
+
+.navbar_menu_item::before{
+    content: attr(data-text);
+    padding: 8px 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    color: makerBrown;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.3s ease-in;
+}
+
+
+.navbar_menu_item:hover:before {
+    color: makerpink;
+    width: 100%;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-underline-position: under;
+}
+
+.navbar_menu_item:active:before {
+    color: makerpink;
+    width: 100%;
+    text-decoration: underline;
+    text-underline-position: under;
+}
