@@ -1,4 +1,4 @@
-@value makerpink, makerMint, makerBrown from '../../common/colors.module.css';
+@value makerpink, makerMint, makerBrown, makerOrange from '../../common/colors.module.css';
 @value fontMenu '../../common/font.module.css';
 
 .navbar{
@@ -6,12 +6,15 @@
     top: 0;
     display: flex;
     justify-content: space-between;
-    border: 1px solid makerpink;
     padding: 1rem;
 }
 
+.navbar_logo {
+    padding-left: 7%;
+}
+
 .title {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Pacifico', cursive;
     color: makerMint;
     text-decoration: none;
@@ -68,7 +71,8 @@ ul {
 
 
 .navbar_menu_item:hover:before {
-    color: makerpink;
+    padding-bottom: 3rem;
+    color: makerOrange;
     width: 100%;
     text-decoration: underline;
     text-decoration-style: wavy;
@@ -76,7 +80,8 @@ ul {
 }
 
 .navbar_menu_item:active:before {
-    color: makerpink;
+    padding-bottom: 3rem;
+    color: makerOrange;
     width: 100%;
     text-decoration: underline;
     text-underline-position: under;
