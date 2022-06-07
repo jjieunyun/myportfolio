@@ -84,8 +84,8 @@ const Skills = () => {
                                 <h3 className={styles.skillset_title}>ETC</h3>
                                 <ul className={styles.etc_list}>
                                     <li><span>Git</span></li>
-                                    <li><span>잘하는거</span></li>
-                                    <li><span>잘하는거</span></li>
+                                    <li><span>BLog</span></li>
+                                    <li><span>Git Page</span></li>
                                 </ul>
                             </div>
                         </div>
