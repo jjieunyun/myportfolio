@@ -1,1 +1,7 @@
+@value fontMenu, fontLogo from '../../common/font.module.css';
+@value titleSize from '../../common/size.module.css';
+@value makerWhite,makerBrown,makerMint,makerOrange,makerGreen,makerpink,makerBlue  from '../../common/colors.module.css';
 
+.contact {
+    background-color: makerBlue;
+}

@@ -6,7 +6,7 @@
     background-color: makerpink;
     color: makerBrown;
     text-align: center;
-    height: 110vh;
+    height: 120vh;
 }
 
 .title {
@@ -31,7 +31,38 @@
     position: relative;
     padding-top: 2rem;
     margin: auto;
-    left: -20%;
-    width: 50%;
+    width: 80%;
+}
 
+.card {
+    position: relative;
+    max-width: 60%;
+    width: 60%;
+    height: 300px;
+    margin: auto;
+    margin-top: 3rem;
+    border: 2px solid makerBrown;
+    background-color: makerWhite;
+    border-radius: 20px;
+    color: makerBrown;
+}
+
+.bar {
+    border-bottom: 2px solid makerBrown;
+    width: auto;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.bar  div {
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 0;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    background-color: makerBrown;
+    border: 1px solid makerBrown;
+    border-radius: 50%;
 }

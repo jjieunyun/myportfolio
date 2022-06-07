@@ -10,6 +10,15 @@ const Works = () => {
             <div className={styles.slider}>
                 <CenterSlider/>
             </div>
+
+            <div className={styles.card}>
+                <div className={styles.bar}>
+                    <div></div><div></div><div></div>
+                </div>
+                <h3>Portfolio Site</h3>
+                <p>Html CSS React 아이콘 찾아서 넣기</p>
+                <p>간단하게 사이트 설명 넣기</p>
+            </div>
         </section>
     );
 };
