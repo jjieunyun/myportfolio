@@ -1,0 +1,112 @@
+@value fontMenu, fontLogo from '../../common/font.module.css';
+@value titleSize, Radius from '../../common/size.module.css';
+@value makerWhite,makerLightGrey,makerBrown,makerMint,makerOrange,makerGreen,makerpink,makerBlue  from '../../common/colors.module.css';
+
+.skills {
+    background-color: makerGreen;
+    text-align: center;
+    height: 120vh;
+}
+
+.container {
+    padding-top: 8rem;
+    max-width: 80%;
+    margin: auto;
+}
+
+.container > h1 {
+    padding-top: 7rem;
+    font-size: titleSize;
+    font-family: fontMenu;
+    color: makerBrown;
+    margin: 0;
+}
+
+.skillset {
+    background-color: makerWhite;
+    border: 2px solid makerBrown;
+    border-radius: Radius;
+    color: makerBrown;
+    margin: 20px 0;
+}
+
+.bar {
+    position: relative;
+    border-bottom: 2px solid makerBrown;
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.bar  div {
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 0;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    background-color: makerBrown;
+    border: 1px solid makerBrown;
+    border-radius: 50%;
+}
+
+
+.skillset_container {
+    display: flex;
+    height: 400px;
+}
+
+.skillset_title {
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    font-family: fontLogo;
+}
+
+.skillset_left {
+    flex-basis: 60%;
+    
+    background-color: makerLightGrey;
+    border-radius: 0 0 0 18px;
+    padding: 1rem 1.5rem;
+}
+
+.skillset_right {
+    flex-basis: 40%;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang {
+    font-weight: bold;
+}
+
+.per {
+    color: rgb(129, 126, 126);
+    font-size: 0.9rem;
+}
+
+.skill {
+    margin-bottom: 2rem;
+}
+
+.skill_bar {
+    width: 100%;
+    height: 5px;
+    border-radius: 50px;
+    background-color: grey;
+}
+
+.skill_value {
+    width: 90%;
+    height: 5px;
+    border-radius: 50px;
+    background-color: orange;
+}
+
+.tools, .etc {
+    padding: 0.5rem;
+}

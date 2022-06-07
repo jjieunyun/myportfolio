@@ -6,7 +6,7 @@ const About = () => {
         <section className={styles.about}>
             
 
-        <div className={styles.about_history}>
+        <div className={styles.history}>
             <div className={styles.history_box}>
                 <h1>About Me</h1>
                 <div className={styles.intro}>
@@ -16,16 +16,16 @@ const About = () => {
                     <div className={styles.intro_box}>
                         <div className={styles.about_history_age}>
                                 <h3><i style={{fontSize:'1.7rem'}} class="fa-solid fa-cake-candles"></i></h3>
-                                <p>1992. 05.07</p>
+                                <p className={styles.age}>1992. 05.07</p>
                         </div>
                         <div className={styles.about_history_edu}>
                                 <h3><i style={{fontSize:'1.7rem'}} className="fa-solid fa-graduation-cap"></i></h3>
-                                <p>동아대학교 <br/>국제학부 중국학전공</p>
+                                <p className={styles.edu}>동아대학교 <br/>국제학부 중국학전공</p>
                         </div>
                     </div>
                     <div className={styles.reason}>
                         <h3>Frontend 개발자를 꿈꾸는 이유?</h3>
-                        <p>대한민국이 사상 최초로 실시하는 우주 탐사가 카운트 다운에 들어갔다. 달 탐사를 위해 개발된 '다누리(KPLO·Korea Pathfinder Lunar Orbiter)'가 발사를 위한 모든 준비를 마친 것이다. 다누리는 다음달 초 미국으로 이송돼 8월3일께 발사되며 12월 중순 달에 도착해 약 1년간 달 영구 음영 지대 촬영 등 주요 탐사와 함께 우주통신망 기술 등을 실험할 예정이다.</p>
+                        <p> 달 탐사를 위해 개발된 '다누리(KPLO·Korea Pathfinder Lunar Orbiter)'가 발사를 위한 모든 준비를 마친 것이다. 다누리는 다음달 초 미국으로 이송돼 8월3일께 발사되며 12월 중순 달에 도착해 약 1년간 달 영구 음영 지대 촬영 등 주요 탐사와 함께 우주통신망 기술 등을 실험할 예정이다.</p>
                     </div>
                 </div>
             </div>
