@@ -3,7 +3,7 @@
 
 .home {
     width: 100vw;
-    height: 86vh;
+    height: 100vh;
 }
 
 .background {
@@ -18,8 +18,8 @@
 
 .avatar {
     position: absolute;
-    top: 28vh;
-    left: 20%;
+    top: 40vh;
+    left: 23%;
     margin: 0;
 }
 
@@ -27,7 +27,7 @@
     height: 60vh;
     width: 700px;
     position: relative;
-    top: 50px;
+    top: 200px;
     left: 50%;
     white-space: normal;
     word-wrap:break-word;

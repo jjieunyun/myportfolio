@@ -1,12 +1,17 @@
 @value makerpink, makerMint, makerBrown, makerOrange from '../../common/colors.module.css';
 @value fontMenu '../../common/font.module.css';
 
+/*기본 navbar styles*/
+
 .navbar{
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    z-index: 100;
+
 }
 
 .navbar_logo {
@@ -28,11 +33,7 @@
 }
 
 
-.title:visited {
-    color: makerMint;
-}
-
-ul {
+.navbar_menu {
     list-style: none;
     padding-left: 0;
     
@@ -48,7 +49,7 @@ ul {
     cursor: pointer;
     font-size: 1.5rem;
     font-family: 'Paytone One', sans-serif;
-    text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
+    border: none;
 
     display: inline-block;
     line-height: 1rem;
@@ -66,12 +67,13 @@ ul {
     color: makerBrown;
     overflow: hidden;
     white-space: nowrap;
-    transition: all 0.3s ease-in;
+    transition: 0.3s ease-in;
+    transition-property: color, width;
 }
 
 
 .navbar_menu_item:hover:before {
-    padding-bottom: 3rem;
+    padding-bottom: 3.5rem;
     color: makerOrange;
     width: 100%;
     text-decoration: underline;
@@ -79,10 +81,85 @@ ul {
     text-underline-position: under;
 }
 
-.navbar_menu_item:active:before {
-    padding-bottom: 3rem;
+
+
+/*changed*/
+.changed_navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    transition: all 0.2s ease-in-out;
+}
+
+.changed_logo {
+    padding-left: 5%;
+}
+
+.changed_title {
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    color: makerMint;
+    text-decoration: none;
+    align-items: center;
+    transition: all 0.3s ease-in;
+}
+
+.changed_title > p {
+    margin: 0;
+    margin-left: 1rem;
+    text-shadow: -1px 0 makerBrown, 0 1.5px makerBrown, 1.5px 0 makerBrown, 0 -1px makerBrown;
+}
+
+.changed_menu {
+    list-style: none;
+    padding-left: 0;
+    
+}
+
+.changed_menu {
+    display: flex;
+}
+
+.changed_item {
+    padding: 8px 12px;
+    margin: 0 3px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: 'Paytone One', sans-serif;
+    border: none;
+
+    display: inline-block;
+    line-height: 1rem;
+    color: makerBrown;
+    position: relative;
+}
+
+.changed_item::before{
+    content: attr(data-text);
+    padding: 8px 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    color: makerBrown;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.3s ease-in;
+    transition-property: color, width;
+}
+
+
+.changed_item:hover:before {
+    padding-bottom: 3.5rem;
     color: makerOrange;
     width: 100%;
     text-decoration: underline;
+    text-decoration-style: wavy;
     text-underline-position: under;
 }
