@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './skills.module.css'
 
-const Skills = () => {
+const Skills = forwardRef((props,ref) => {
     return (
-        <section className={styles.skills}>
+        <section ref={ref} className={styles.skills}>
             <div className={styles.container}>
             <h1>Skills & Attributes</h1>
             <p>스킬과 관련된 나의 부가적인 설명</p>
@@ -94,6 +94,6 @@ const Skills = () => {
             </div>
         </section>
     );
-};
+});
 
 export default Skills;

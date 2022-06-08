@@ -1,8 +1,9 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect, useRef } from 'react';
 import styles from './navbar.module.css'
 
-const Navbar = () => {
+const Navbar = ({scrollEvent}) => {
     const [scrollPosition, setScrollPosition] = useState(0);
+    const navRef = useRef();
 
     const updateScroll = () => {
         setScrollPosition(window.scrollY || document.documentElement.scrollTop);
@@ -11,22 +12,39 @@ const Navbar = () => {
     useEffect(()=>{
         window.addEventListener('scroll', updateScroll);
     });
+
     
+
+    const clickMenu = (event) => {
+        
+        //const target = event.target;
+        const text = event.target.dataset.text;
+        if(text == null) {
+            return;
+        }
+        scrollEvent(text);
+    }
+
     return (
-        <nav className={`${scrollPosition < 100? styles.navbar : styles.changed_navbar}`}>
+        <nav 
+        onClick={(event)=>clickMenu(event)} 
+        ref={navRef}
+        className={`${scrollPosition < 100? styles.navbar : styles.changed_navbar}`}>
             <div 
             className={`${scrollPosition < 100? styles.navbar_logo : styles.changed_logo}`}>
-                <a href='www.naver.com' 
+                <span 
                     className={`${scrollPosition < 100? styles.title : styles.changed_title}`}>
                     <p>jieun.Yun</p>
-                </a>
+                </span>
             </div>
 
-            <ul 
+            <ul
+            
             className={`${scrollPosition < 100? styles.navbar_menu : styles.changed_menu}`}>
                 <li 
                     className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
-                    data-text='Home'>
+                    data-text='Home'
+                    value='home'>
                     Home
                 </li>
                 <li 

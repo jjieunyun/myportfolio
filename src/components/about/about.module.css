@@ -7,12 +7,10 @@
     max-width: 100%;
     text-align: center;
     background-color: makerOrange;
-    padding-top: 3rem;
     padding-bottom: 3rem;
 }
 
 .history {
-    padding-top: 50px;
     max-width: 1500px;
     margin: auto;
 }
@@ -60,7 +58,7 @@
 }
 
 .history_box > h1 {
-    padding-top: 5rem;
+    padding-top: 0rem;
     font-size: titleSize;
     font-family: fontMenu;
     color: makerBrown;
@@ -82,7 +80,7 @@
     max-height: 23rem;
     max-width: 43rem;
     width:43rem;
-    margin-top: 10rem;
+    margin-top: 4.7rem;
 }
 
 .intro h3 {

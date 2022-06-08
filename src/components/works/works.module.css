@@ -6,14 +6,14 @@
     background-color: makerpink;
     color: makerBrown;
     text-align: center;
-    height: 120vh;
+    height: 100vh;
 }
 
 .title {
     font-family: fontMenu;
     font-size: titleSize;
     margin: 0;
-    padding-top: 10rem;
+    padding-top: 3rem;
     text-align: center;
 }
 
@@ -21,8 +21,8 @@
     font-family: fontLogo;
     font-size: 1.5rem;
     position: relative;
-    top: 170px;
-    left: -150px;
+    top: 70px;
+    left: -165px;
     transform: rotate(-8deg);
 }
 

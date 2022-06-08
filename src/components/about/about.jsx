@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './about.module.css'
 
-const About = () => {
+const About = forwardRef((props,ref) => {
     return (
-        <section className={styles.about}>
-            
-
+        <section ref={ref} className={styles.about}>
         <div className={styles.history}>
             <div className={styles.history_box}>
                 <h1>About Me</h1>
@@ -72,6 +70,6 @@ const About = () => {
         </div>
         </section>
     );
-};
+});
 
 export default About;

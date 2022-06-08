@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import CenterSlider from '../slider/centerSlider';
 import styles from './works.module.css'
 
-const Works = () => {
+const Works = forwardRef((props,ref) => {
     return (
-        <section className={styles.work}>
+        <section ref={ref} className={styles.work}>
             <div className={styles.subTitle}>Projects</div>
             <h1 className={styles.title}>My Works</h1>
             <div className={styles.slider}>
@@ -21,6 +21,6 @@ const Works = () => {
             </div>
         </section>
     );
-};
+});
 
 export default Works;

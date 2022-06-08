@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './home.module.css'
 import background from '../../imgs/backgound.png'
 import avatar from '../../imgs/avatar.png'
 
-const Home = () => {
+
+const Home = forwardRef((props,ref) => {
     return (
-        <section className={styles.home}>
+        <section ref={ref} className={styles.home}>
             <img className={styles.background} src={background} alt="" />
             <div className={styles.avatar}>
                 <img  src={avatar} alt="avatar"/>
@@ -18,8 +19,7 @@ const Home = () => {
                 <button className={styles.button}>Contact Me</button>
             </div>
         </section>
-        
     );
-};
+});
 
 export default Home;

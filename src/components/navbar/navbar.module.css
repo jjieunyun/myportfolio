@@ -11,7 +11,7 @@
     justify-content: space-between;
     padding: 1rem;
     z-index: 100;
-
+    transition: all 0.3s ease-in;
 }
 
 .navbar_logo {
@@ -55,6 +55,7 @@
     line-height: 1rem;
     color: makerBrown;
     position: relative;
+    
 }
 
 .navbar_menu_item::before{
@@ -73,12 +74,13 @@
 
 
 .navbar_menu_item:hover:before {
-    padding-bottom: 3.5rem;
-    color: makerOrange;
+
+    color: white;
     width: 100%;
-    text-decoration: underline;
+    text-shadow: -1px 0 makerBrown, 0 1px makerBrown, 1px 0 makerBrown, 0 -1px makerBrown;
+    /* text-decoration: underline;
     text-decoration-style: wavy;
-    text-underline-position: under;
+    text-underline-position: under; */
 }
 
 
@@ -90,15 +92,15 @@
     top: 0;
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
-    background-color: transparent;
+    padding: 0.3rem;
+
     backdrop-filter: blur(5px);
     z-index: 100;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in;
 }
 
 .changed_logo {
-    padding-left: 5%;
+    padding-left: 7%;
 }
 
 .changed_title {
@@ -107,7 +109,6 @@
     color: makerMint;
     text-decoration: none;
     align-items: center;
-    transition: all 0.3s ease-in;
 }
 
 .changed_title > p {
@@ -156,10 +157,10 @@
 
 
 .changed_item:hover:before {
-    padding-bottom: 3.5rem;
-    color: makerOrange;
+    color: white;
     width: 100%;
-    text-decoration: underline;
+    text-shadow: -1px 0 makerBrown, 0 1px makerBrown, 1px 0 makerBrown, 0 -1px makerBrown;
+    /* text-decoration: underline;
     text-decoration-style: wavy;
-    text-underline-position: under;
+    text-underline-position: under; */
 }

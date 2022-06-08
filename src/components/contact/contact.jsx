@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './contact.module.css'
 
-const Contact = () => {
+const Contact = forwardRef((props,ref) => {
     return (
-        <section className={styles.contact}>
+        <section ref={ref} className={styles.contact}>
             <h1 className={styles.title}>Contact</h1>
             <div className={styles.container}>
                 <h2 className={styles.email}>jjieunyun@naver.com</h2>
@@ -16,6 +16,6 @@ const Contact = () => {
             </div>
         </section>
     );
-};
+});
 
 export default Contact;
