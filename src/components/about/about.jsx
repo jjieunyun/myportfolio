@@ -13,7 +13,7 @@ const About = forwardRef((props,ref) => {
                     </div>
                     <div className={styles.intro_box}>
                         <div className={styles.about_history_age}>
-                                <h3><i style={{fontSize:'1.7rem'}} class="fa-solid fa-cake-candles"></i></h3>
+                                <h3><i style={{fontSize:'1.7rem'}} className="fa-solid fa-cake-candles"></i></h3>
                                 <p className={styles.age}>1992. 05.07</p>
                         </div>
                         <div className={styles.about_history_edu}>

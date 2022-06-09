@@ -33,17 +33,23 @@ function App() {
       case 'Contact':
         contactRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
+      default:
+        break;
     }
+  }
+
+  const clickContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (
     <div className="App">
       <Navbar scrollEvent={scrollEvent}/>
-      <Home ref={homeRef}/>
+      <Home clickContact={clickContact} ref={homeRef}/>
       <About ref={aboutRef}/>
       <Skills ref={skillsRef}/>
       <Works ref={worksRef}/>
-      <Contact ref={contactRef}/>
+      <Contact  ref={contactRef}/>
     </div>
   );
 }
