@@ -10,6 +10,7 @@ const Home = forwardRef(({clickContact},ref) => {
     const [scrollPosition, setScrollPosition] = useState(0);
 
 
+
     const updateScroll = () => {
         setScrollPosition(window.scrollY || document.documentElement.scrollTop);
         const homeHeight = divRef.current.getBoundingClientRect().height
@@ -19,6 +20,8 @@ const Home = forwardRef(({clickContact},ref) => {
     useEffect(()=>{
         window.addEventListener('scroll', updateScroll);
     });
+
+    
 
     return (
         <section ref={ref} className={styles.home}>

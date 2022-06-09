@@ -1,6 +1,7 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import About from './components/about/about';
+import Arrow from './components/arrow/arrow';
 import Contact from './components/contact/contact';
 import Home from './components/home//home';
 import Navbar from './components/navbar/navbar';
@@ -14,6 +15,11 @@ function App() {
   const worksRef = useRef(null);
   const contactRef = useRef(null);
   
+  const [homeHeight, setHomeHeight] = useState(0)
+
+  useEffect(()=>{
+    setHomeHeight(homeRef.current.clientHeight)
+  },[homeHeight])
 
   const scrollEvent = (text) => {
 
@@ -42,6 +48,10 @@ function App() {
     contactRef.current?.scrollIntoView({ behavior: 'smooth' });
   }
 
+  const clickHome = () => {
+    homeRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <div className="App">
       <Navbar scrollEvent={scrollEvent}/>
@@ -50,6 +60,7 @@ function App() {
       <Skills ref={skillsRef}/>
       <Works ref={worksRef}/>
       <Contact  ref={contactRef}/>
+      <Arrow clickHome={clickHome} homeHeight={homeHeight}/>
     </div>
   );
 }

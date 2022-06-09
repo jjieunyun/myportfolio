@@ -5,12 +5,13 @@ import "slick-carousel/slick/slick-theme.css";
 import './slick-theme.css';
 import './slick.css';
 import example from '../../imgs/reading_log.png'
+import bookflix from '../../imgs/bookflix_screenshot.png'
 
 export default class CenterSlider extends Component {
 
         render() {
 
-
+            
 
         const settings = {
             arrows: true,
@@ -30,38 +31,20 @@ export default class CenterSlider extends Component {
             <div>
             <Slider {...settings}>
                 <div className='slider_container'>
-                    <div className='slider_button'>
-                        <button>Show Demo1</button>
-                        <button>Git hub</button>
-                    </div>
                     <img   src={example} alt="" />
                 </div>
                 <div className='slider_container'>
-                    <div className='slider_button'>
-                        <button>Show Demo2</button>
-                        <button>Git hub</button>
-                    </div>
+
+                    <img  src={bookflix} alt="" />
+                </div>
+                <div className='slider_container'>
                     <img  src={example} alt="" />
                 </div>
                 <div className='slider_container'>
-                    <div className='slider_button'>
-                        <button>Show Demo3</button>
-                        <button>Git hub</button>
-                    </div>
-                    <img  src={example} alt="" />
-                </div>
-                <div className='slider_container'>
-                    <div className='slider_button'>
-                        <button>Show Demo4</button>
-                        <button>Git hub</button>
-                    </div>
+
                     <img src={example} alt="" />
                 </div>
                 <div className='slider_container'>
-                    <div className='slider_button'>
-                        <button>Show Demo5</button>
-                        <button>Git hub</button>
-                    </div>
                     <img src={example} alt="" />
                 </div>
                 

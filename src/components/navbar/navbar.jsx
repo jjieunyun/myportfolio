@@ -26,49 +26,51 @@ const Navbar = ({scrollEvent}) => {
     }
 
     return (
-        <nav 
-        onClick={(event)=>clickMenu(event)} 
-        ref={navRef}
-        className={`${scrollPosition < 100? styles.navbar : styles.changed_navbar}`}>
-            <div 
-            className={`${scrollPosition < 100? styles.navbar_logo : styles.changed_logo}`}>
-                <span 
-                    className={`${scrollPosition < 100? styles.title : styles.changed_title}`}>
-                    <p>jieun.Yun</p>
-                </span>
-            </div>
+            <nav 
+            onClick={(event)=>clickMenu(event)} 
+            ref={navRef}
+            className={`${scrollPosition < 100? styles.navbar : styles.changed_navbar}`}>
+                <div 
+                className={`${scrollPosition < 100? styles.navbar_logo : styles.changed_logo}`}>
+                    <span 
+                        className={`${scrollPosition < 100? styles.title : styles.changed_title}`}>
+                        <p>jieun.Yun</p>
+                    </span>
+                </div>
 
-            <ul
-            
-            className={`${scrollPosition < 100? styles.navbar_menu : styles.changed_menu}`}>
-                <li 
-                    className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
-                    data-text='Home'
-                    value='home'>
-                    Home
-                </li>
-                <li 
-                    className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
-                    data-text='About'>
-                    About
-                </li>
-                <li 
-                    className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
-                    data-text='Skills'>
-                    Skills
-                </li>
-                <li 
-                    className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
-                    data-text='Myworks'>
-                    Myworks
-                </li>
-                <li 
-                    className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
-                    data-text='Contact'>
-                    Contact
-                </li>
-            </ul>
-        </nav>
+                <ul
+                
+                className={`${scrollPosition < 100? styles.navbar_menu : styles.changed_menu}`}>
+                    <li 
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
+                        data-text='Home'
+                        value='home'>
+                        Home
+                    </li>
+                    <li 
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
+                        data-text='About'>
+                        About
+                    </li>
+                    <li 
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
+                        data-text='Skills'>
+                        Skills
+                    </li>
+                    <li 
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
+                        data-text='Myworks'>
+                        Myworks
+                    </li>
+                    <li 
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
+                        data-text='Contact'>
+                        Contact
+                    </li>
+                </ul>
+
+                
+            </nav>
     );
 };
 
