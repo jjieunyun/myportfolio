@@ -16,7 +16,7 @@ import bookflix from '../../imgs/bookflix_screenshot.png'
         initial: 0,
         slides: {
             perView: 5,
-            spacing: 10,
+            spacing:10,
         },
         },
         [ThumbnailPlugin(instanceRef)]
@@ -61,7 +61,9 @@ import bookflix from '../../imgs/bookflix_screenshot.png'
         <section className='slider_container'>
         <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide number-slide1">
+                <div className='img_container'>
                 <img className='mainIMG' src={example} alt="" />
+                </div>
                 <div className='slide_card'>
                     <div className='slide__bar'>
                         <div></div><div></div><div></div>
@@ -69,6 +71,8 @@ import bookflix from '../../imgs/bookflix_screenshot.png'
                     <h3>Portfolio Site</h3>
                     <p>Html CSS React 아이콘 찾아서 넣기</p>
                     <p>간단하게 사이트 설명 넣기</p>
+                    <button>깃헙</button>
+                    <button>View Demo</button>
                 </div>
             </div>
 

@@ -4,9 +4,11 @@
 
 .slider_container{
     margin: 0;
-    width: 100%;
+    width: 90rem;
+    height: 35rem;
     max-width: 100%;
     margin: auto;
+    border: 1px solid red;
 }
     
     /* [class^="number-slide"],
@@ -20,22 +22,45 @@
 
 .keen-slider__slide{
     display: flex;
-    justify-content: space-between;
     height: 23rem;
 }
 
-.keen-slider__slide > .mainIMG {
+
+/*큰 슬라이더 안에있는 이미지*/
+.img_container {
+    width: 50%;
     border-radius: 10px;
+    height: 100%;
+    opacity: 1;
+    background-color: black;
 }
+
+
+
+.keen-slider__slide> .img_container > .mainIMG {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in;
+}
+
+
+
+/* .keen-slider__slide > .img_container> .mainIMG:hover {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 20;
+} */
+
 
 /*slide_card*/
-.keen-slider__slide > div {
+.keen-slider__slide > .slide_card{
     position: relative;
-    max-width: 34rem;
-    width: 50%;
-    height: 23rem;
-    right: -10px;
-    margin: auto;
+    margin-left: 2%;
+    width: 48%;
+    height: 100%;
+    margin-right: 0;
     border: 2px solid #594f4f;
     background-color: white;
     border-radius: 20px;
@@ -43,7 +68,7 @@
 }
 
 /*slide__bar의 container*/
-.keen-slider__slide > div >div {
+.keen-slider__slide > .slide_card >.slide__bar {
     border-bottom: 2px solid #594f4f;
     width: auto;
     height: 2rem;
@@ -52,7 +77,7 @@
 }
 
 /*slide__bar의 안에 dots*/
-.keen-slider__slide > div >div >div {
+.keen-slider__slide > .slide_card >.slide__bar > div{
     margin: auto;
     margin-left: 10px;
     margin-right: 0;
@@ -66,7 +91,6 @@
 
 
     .number-slide1 img{
-        width: 38rem;
         height: auto;
     }
     
@@ -93,15 +117,15 @@
 
     
     .thumbnail .keen-slider__slide {
-        margin-top: 0.8rem;
-        max-width: 50px;
+        margin-top: 1.5rem;
+        width: 17.5rem;
         height: 9rem;
         cursor: pointer;
         background-color: lightgrey;
     }
 
     .thumbnail .keen-slider__slide > img {
-        object-fit: contain;
+        width: 17.5rem;
         height: 9rem;
         opacity: 0.2;
         transition: opacity 0.3s ease-in;

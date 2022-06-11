@@ -10,6 +10,10 @@
     margin: auto;
 }
 
+/* .work_container {
+    translate : (50%, 50%);
+} */
+
 .title {
     font-family: fontMenu;
     font-size: titleSize;
