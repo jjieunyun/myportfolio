@@ -5,6 +5,7 @@
 .about {
     margin: auto;
     max-width: 100%;
+    height: 100vh;
     text-align: center;
     background-color: makerOrange;
     padding-bottom: 3rem;

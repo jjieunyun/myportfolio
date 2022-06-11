@@ -1,0 +1,149 @@
+@value fontMenu, fontLogo from '../../common/font.module.css';
+@value titleSize, Radius from '../../common/size.module.css';
+@value makerWhite,makerLightGrey,makerBrown,makerMint,makerOrange,makerGreen,makerpink,makerBlue  from '../../common/colors.module.css';
+
+.slider_container{
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+    
+    /* [class^="number-slide"],
+    [class*=" number-slide"] {
+        border: 1px solid red;
+        background-color: antiquewhite;
+        display: flex;
+        align-items: center;
+        height: 25rem;
+    } */
+
+.keen-slider__slide{
+    display: flex;
+    justify-content: space-between;
+    height: 23rem;
+}
+
+.keen-slider__slide > .mainIMG {
+    border-radius: 10px;
+}
+
+/*slide_card*/
+.keen-slider__slide > div {
+    position: relative;
+    max-width: 34rem;
+    width: 50%;
+    height: 23rem;
+    right: -10px;
+    margin: auto;
+    border: 2px solid #594f4f;
+    background-color: white;
+    border-radius: 20px;
+    color: #594f4f;
+}
+
+/*slide__bar의 container*/
+.keen-slider__slide > div >div {
+    border-bottom: 2px solid #594f4f;
+    width: auto;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+/*slide__bar의 안에 dots*/
+.keen-slider__slide > div >div >div {
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 0;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    background-color: #594f4f;
+    border: 1px solid c;
+    border-radius: 50%;
+}
+
+
+    .number-slide1 img{
+        width: 38rem;
+        height: auto;
+    }
+    
+    .number-slide1 {
+        
+    }
+    
+    .number-slide2 {
+        
+    }
+    
+    .number-slide3 {
+        
+    }
+    
+    .number-slide4 {
+        
+    }
+    
+    .number-slide5 {
+        
+    }
+    
+
+    
+    .thumbnail .keen-slider__slide {
+        margin-top: 0.8rem;
+        max-width: 50px;
+        height: 9rem;
+        cursor: pointer;
+        background-color: lightgrey;
+    }
+
+    .thumbnail .keen-slider__slide > img {
+        object-fit: contain;
+        height: 9rem;
+        opacity: 0.2;
+        transition: opacity 0.3s ease-in;
+    }
+
+    .thumbnail > .keen-slider__slide.active > img{
+        /* border: 2px solid black; */
+        opacity: 1;
+    }
+    
+
+/*custom card*/
+
+/* .slide_card {
+        position: relative;
+        max-width: 40%;
+        width: 40%;
+        height: 300px;
+        margin: auto;
+        margin-top: 3rem;
+        border: 2px solid makerBrown;
+        background-color: makerWhite;
+        border-radius: 20px;
+        color: makerBrown;
+    }
+    
+    .slide__bar {
+        border-bottom: 2px solid makerBrown;
+        width: auto;
+        height: 2rem;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .slide__bar >  div {
+        margin: auto;
+        margin-left: 10px;
+        margin-right: 0;
+        text-align: center;
+        width: 15px;
+        height: 15px;
+        background-color: makerBrown;
+        border: 1px solid makerBrown;
+        border-radius: 50%;
+    } */
