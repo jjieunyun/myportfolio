@@ -1,10 +1,15 @@
 import React, { useState,useEffect, useRef } from 'react';
 import styles from './navbar.module.css'
 
-const Navbar = ({scrollEvent}) => {
+const Navbar = ({scrollEvent, sectionRefs}) => {
     const [scrollPosition, setScrollPosition] = useState(0);
-    const navRef = useRef();
+    const navRef = useRef([]);
+    const navItems = useRef([]);
 
+
+    // const sections = sectionRefs.current
+
+    //⭐스크롤 관련 Effect
     const updateScroll = () => {
         setScrollPosition(window.scrollY || document.documentElement.scrollTop);
     }
@@ -13,17 +18,66 @@ const Navbar = ({scrollEvent}) => {
         window.addEventListener('scroll', updateScroll);
     });
 
-    
 
     const clickMenu = (event) => {
-        
-        //const target = event.target;
         const text = event.target.dataset.text;
         if(text == null) {
             return;
         }
         scrollEvent(text);
     }
+
+    //⭐intersection observer
+    /*
+    1. 모든 섹션요소들과 sectionItems 가지고온다 -> props를 이용해서 app에서 section요소들을 받아옴(ref받아오기)
+    2. IntersectionObserver를 이용해서 모든 섹션들을 관리한다 ->nav컴포넌트에서 코드만들기
+    3. 보여지는 섹션에 해당하는 메뉴아이템을 활성화 시킨다
+    */
+
+    // let seletedNavItem = navItems[0];
+    // let seletedNavIndex;
+    // function selevtNavItem(seleted) {
+    //     seletedNavItem.classList.remove('active')
+    //     seletedNavItem = seleted;
+    //     seletedNavItem.classList.add('active')
+    // }
+
+
+    // const observerOptions = {
+    //     root : null,
+    //     rootMargin: '0px',
+    //     threshole: 0.3,
+    // }
+    // const observerCallback = (entries, observer) => {
+    //     // console.log(entries)
+    //     entries.forEach(entry=>{
+    //         // console.log(entry.target.className)
+    //         if(!entry.isIntersecting && entry.isIntersectionRatio >0){
+    //             console.log(entry)
+    //             const index = sections.indexOf(`.${entry.target.className}`);
+    //             // console.log(index, entry.target.className)
+
+    //             //스크롤링이 아래로 되어서 페이지가 올라옴
+    //             if(entry.boundingClientRect.y < 0) {
+    //                 seletedNavIndex = index + 1;
+    //             }else {
+    //                 seletedNavIndex = index -1;
+    //             }                
+    //         }
+    //     })
+    // }
+
+    // const addedClassName = function(){
+    //     return 'styles.active'
+    // }
+
+
+    // useEffect(()=> {
+    //     const observer = new IntersectionObserver(observerCallback, observerOptions);
+    //     sections.forEach(section => observer.observe(section.current))
+    // },[])
+    
+
 
     return (
             <nav 
@@ -42,28 +96,33 @@ const Navbar = ({scrollEvent}) => {
                 
                 className={`${scrollPosition < 100? styles.navbar_menu : styles.changed_menu}`}>
                     <li 
-                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
+                        ref={(el)=>navItems.current[0]=el}
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} `}
                         data-text='Home'
                         value='home'>
                         Home
                     </li>
                     <li 
-                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
+                        ref={(el)=>navItems.current[1]=el}
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} `}
                         data-text='About'>
                         About
                     </li>
                     <li 
-                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
+                        ref={(el)=>navItems.current[2]=el}
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} `}
                         data-text='Skills'>
                         Skills
                     </li>
                     <li 
-                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
+                        ref={(el)=>navItems.current[3]=el}
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} `}
                         data-text='Myworks'>
                         Myworks
                     </li>
                     <li 
-                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}`}
+                        ref={(el)=>navItems.current[4]=el}
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} `}
                         data-text='Contact'>
                         Contact
                     </li>

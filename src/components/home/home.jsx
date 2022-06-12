@@ -24,7 +24,7 @@ const Home = forwardRef(({clickContact},ref) => {
     
 
     return (
-        <section ref={ref} className={styles.home}>
+        <section ref={ref} className={styles.home} data-name='home'>
             <img className={styles.background} src={background} alt="" />
             <div className={styles.div_container} ref={divRef}>
                 <div className={styles.avatar}>

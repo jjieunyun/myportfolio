@@ -8,9 +8,6 @@ const About = forwardRef((props,ref) => {
             <div className={styles.history_box}>
                 <h1>About Me</h1>
                 <div className={styles.intro}>
-                    <div className={styles.bar}>
-                        <div></div><div></div><div></div>
-                    </div>
                     <div className={styles.intro_box}>
                         <div className={styles.about_history_age}>
                                 <h3><i style={{fontSize:'1.7rem'}} className="fa-solid fa-cake-candles"></i></h3>
@@ -64,8 +61,6 @@ const About = forwardRef((props,ref) => {
                     <p>新HSK 5급(중국국가한반/0000.00)</p>
                     <p>자동차 운전면허증 2종 보통(0000.00)</p>
                 </div>
-
-                
             </div>
         </div>
         </section>

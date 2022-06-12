@@ -16,10 +16,14 @@ function App() {
   const contactRef = useRef(null);
   
   const [homeHeight, setHomeHeight] = useState(0)
+  const sectionRefs = useRef([homeRef,aboutRef,skillsRef,worksRef,contactRef])
+
+  
 
   useEffect(()=>{
     setHomeHeight(homeRef.current.clientHeight)
   },[homeHeight])
+
 
   const scrollEvent = (text) => {
 
@@ -54,10 +58,10 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar scrollEvent={scrollEvent}/>
+      <Navbar scrollEvent={scrollEvent} sectionRefs={sectionRefs}/>
       <Home clickContact={clickContact} ref={homeRef}/>
       <About ref={aboutRef}/>
-      <Skills ref={skillsRef}/>
+      <Skills ref={skillsRef} scrollEvent={scrollEvent}/>
       <Works ref={worksRef}/>
       <Contact  ref={contactRef}/>
       <Arrow clickHome={clickHome} homeHeight={homeHeight}/>

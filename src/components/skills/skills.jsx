@@ -1,7 +1,29 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './skills.module.css'
 
-const Skills = forwardRef((props,ref) => {
+const Skills = forwardRef(({},ref) => {
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [color,setColor] = useState(false)
+//⭐스크롤 관련 Effect
+const updateScroll = () => {
+    setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+}
+
+useEffect(()=>{
+    if (scrollPosition >=(ref.current.getBoundingClientRect().height)*2) {
+        console.log('true')
+        setColor(true);
+    } 
+},[scrollPosition,ref])
+
+
+useEffect(()=>{
+    window.addEventListener('scroll', updateScroll);
+});
+
+
+
     return (
         <section ref={ref} className={styles.skills}>
             <div className={styles.container}>
@@ -21,7 +43,7 @@ const Skills = forwardRef((props,ref) => {
                                         <span className={styles.per}>99%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                            <div className={styles.skill_value}></div>
+                                            <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`}></div>
                                         </div>
                                     
                                 </div>
@@ -32,7 +54,7 @@ const Skills = forwardRef((props,ref) => {
                                         <span className={styles.per}>99%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                            <div className={styles.skill_value}></div>
+                                            <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`} ></div>
                                         </div>
                                 </div>
 
@@ -42,7 +64,7 @@ const Skills = forwardRef((props,ref) => {
                                         <span className={styles.per}>99%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                            <div className={styles.skill_value}></div>
+                                            <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`}></div>
                                         </div>
                                     
                                 </div>
@@ -53,7 +75,7 @@ const Skills = forwardRef((props,ref) => {
                                         <span className={styles.per}>99%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                            <div className={styles.skill_value}></div>
+                                            <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`}></div>
                                         </div>
                                     
                                 </div>
@@ -64,7 +86,7 @@ const Skills = forwardRef((props,ref) => {
                                         <span className={styles.per}>99%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                            <div className={styles.skill_value}></div>
+                                            <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`}></div>
                                         </div>
                                     
                                 </div>

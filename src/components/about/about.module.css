@@ -5,16 +5,44 @@
 .about {
     margin: auto;
     max-width: 100%;
-    height: 100vh;
-    text-align: center;
     background-color: makerOrange;
     padding-bottom: 3rem;
 }
 
 .history {
-    max-width: 1500px;
     margin: auto;
+    position: relative;
 }
+
+.history_box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.history_box2 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    justify-content: space-around;
+}
+
+.intro {
+    position: relative;
+    top: 30px;
+    margin: auto;
+    height: 20rem;
+    max-height: 23rem;
+    max-width: 43rem;
+    width:43rem;
+    margin-top: 4.7rem;
+    color: makerBrown;
+}
+
+
 
 .reason {
     max-width: 80%;
@@ -29,7 +57,7 @@
     flex-direction: row;
 }
 
-.bar  div {
+.bar > div {
     margin: auto;
     margin-left: 10px;
     margin-right: 0;
@@ -41,7 +69,7 @@
     border-radius: 50%;
 }
 
-.intro,.certification, .job, .social {
+.certification, .job, .social {
     border: 2px solid makerBrown;
     background-color: makerWhite;
     border-radius: 20px;
@@ -54,9 +82,6 @@
     font-family: fontLogo;
 }
 
-.history_box {
-    display: flex;
-}
 
 .history_box > h1 {
     padding-top: 0rem;
@@ -75,14 +100,7 @@
 }
 
 
-.intro {
-    margin: auto;
-    height: 20rem;
-    max-height: 23rem;
-    max-width: 43rem;
-    width:43rem;
-    margin-top: 4.7rem;
-}
+
 
 .intro h3 {
     margin-bottom: 0.5rem;
@@ -107,15 +125,4 @@
     line-height: 1.3rem;
 }
 
-.social {
 
-}
-
-.history_box2 {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    justify-content: space-around;
-
-}

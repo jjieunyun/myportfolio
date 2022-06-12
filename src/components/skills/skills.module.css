@@ -103,9 +103,17 @@
 .skill_value {
     width: 90%;
     height: 5px;
+    /* border-radius: 50px;
+    background-color: orange; */
+    transition: all 0.2s ease-in;
+}
+
+.active {
     border-radius: 50px;
     background-color: orange;
 }
+
+
 
 .tools, .etc {
     padding: 0.5rem;
