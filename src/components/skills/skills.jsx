@@ -2,7 +2,7 @@ import React, { forwardRef, useEffect } from 'react';
 import { useState } from 'react';
 import styles from './skills.module.css'
 
-const Skills = forwardRef(({},ref) => {
+const Skills = forwardRef((props,ref) => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [color,setColor] = useState(false)
 //⭐스크롤 관련 Effect
@@ -99,7 +99,7 @@ useEffect(()=>{
                                 <ul className={styles.tools_list}>
                                     <li><span>Node.js Express</span></li>
                                     <li><span>FireBase</span></li>
-                                    <li><span>Visual Studio code</span></li>
+                                    <li><span>Redux</span></li>
                                 </ul>
                             </div>
                             <div className={styles.etc}>

@@ -42,7 +42,9 @@
 }
 
 /*active CSS*/
-.navbar_menu_item.active {
+
+
+.active {
     color: white;
     width: 100%;
     text-shadow: -1px 0 makerBrown, 0 1px makerBrown, 1px 0 makerBrown, 0 -1px makerBrown;
@@ -149,11 +151,6 @@
     position: relative;
 }
 
-.changed_item.active {
-    color: white;
-    width: 100%;
-    text-shadow: -1px 0 makerBrown, 0 1px makerBrown, 1px 0 makerBrown, 0 -1px makerBrown;
-}
 
 .changed_item::before{
     content: attr(data-text);
