@@ -6,7 +6,7 @@ const Navbar = ({scrollEvent, sectionRefs}) => {
     const navRef = useRef([]);
     const navItems = useRef([]);
 
-
+    // const [color,setColor] = useState(false)
     // const sections = sectionRefs.current
 
     //⭐스크롤 관련 Effect
@@ -17,7 +17,7 @@ const Navbar = ({scrollEvent, sectionRefs}) => {
     useEffect(()=>{
         window.addEventListener('scroll', updateScroll);
     });
-
+    
 
     const clickMenu = (event) => {
         const text = event.target.dataset.text;
@@ -26,6 +26,8 @@ const Navbar = ({scrollEvent, sectionRefs}) => {
         }
         scrollEvent(text);
     }
+
+
 
     //⭐intersection observer
     /*
@@ -36,10 +38,11 @@ const Navbar = ({scrollEvent, sectionRefs}) => {
 
     // let seletedNavItem = navItems[0];
     // let seletedNavIndex;
-    // function selevtNavItem(seleted) {
-    //     seletedNavItem.classList.remove('active')
+
+    // function selectNavItem(seleted) {
+    //     seletedNavItem.classList.remove('styles.active')
     //     seletedNavItem = seleted;
-    //     seletedNavItem.classList.add('active')
+    //     seletedNavItem.classList.add('styles.active')
     // }
 
 
@@ -62,15 +65,11 @@ const Navbar = ({scrollEvent, sectionRefs}) => {
     //                 seletedNavIndex = index + 1;
     //             }else {
     //                 seletedNavIndex = index -1;
-    //             }                
+    //             }
+    //             selectNavItem()                
     //         }
     //     })
     // }
-
-    // const addedClassName = function(){
-    //     return 'styles.active'
-    // }
-
 
     // useEffect(()=> {
     //     const observer = new IntersectionObserver(observerCallback, observerOptions);
@@ -97,32 +96,37 @@ const Navbar = ({scrollEvent, sectionRefs}) => {
                 className={`${scrollPosition < 100? styles.navbar_menu : styles.changed_menu}`}>
                     <li 
                         ref={(el)=>navItems.current[0]=el}
-                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} `}
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item}
+                        `}
                         data-text='Home'
                         value='home'>
                         Home
                     </li>
                     <li 
                         ref={(el)=>navItems.current[1]=el}
-                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} `}
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} 
+                        `}
                         data-text='About'>
                         About
                     </li>
                     <li 
                         ref={(el)=>navItems.current[2]=el}
-                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} `}
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} 
+                        `}
                         data-text='Skills'>
                         Skills
                     </li>
                     <li 
                         ref={(el)=>navItems.current[3]=el}
-                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} `}
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} 
+                        `}
                         data-text='Myworks'>
                         Myworks
                     </li>
                     <li 
                         ref={(el)=>navItems.current[4]=el}
-                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} `}
+                        className={`${scrollPosition < 100? styles.navbar_menu_item : styles.changed_item} 
+                        `}
                         data-text='Contact'>
                         Contact
                     </li>

@@ -2,9 +2,13 @@ import React, { forwardRef, useEffect } from 'react';
 import { useState } from 'react';
 import styles from './skills.module.css'
 
+<<<<<<< HEAD
 import ProgressBar from "@ramonak/react-progress-bar";
 
 const Skills = forwardRef(({},ref) => {
+=======
+const Skills = forwardRef((props,ref) => {
+>>>>>>> 2482f4c6a50e07791d14f100a4633a40577d80f6
     const [scrollPosition, setScrollPosition] = useState(0);
     const [color,setColor] = useState(false)
 //⭐스크롤 관련 Effect
@@ -109,7 +113,7 @@ useEffect(()=>{
                                 <ul className={styles.tools_list}>
                                     <li><span>Node.js Express</span></li>
                                     <li><span>FireBase</span></li>
-                                    <li><span>Visual Studio code</span></li>
+                                    <li><span>Redux</span></li>
                                 </ul>
                             </div>
                             <div className={styles.etc}>
