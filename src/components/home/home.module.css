@@ -1,5 +1,5 @@
 @value makerpink, makerMint, makerBrown, makerOrange from '../../common/colors.module.css';
-@value fontLogo from '../../common/font.module.css';
+@value fontLogo, fontMenu, fontHome,fontPoint from '../../common/font.module.css';
 
 .home {
     width: 100vw;
@@ -39,8 +39,26 @@
     color: makerBrown;
 }
 
-.intro > h3 {
+.intro>  h3 {
     font-size: 2rem;
+    margin: 0;
+    font-family: fontPoint;
+}
+
+.point {
+    font-size: 3rem;
+    font-family: fontMenu;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: makerBrown;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.point:hover {
+    font-size: 3rem;
+    font-family: fontMenu;
+    color: makerBrown;
 }
 
 .title {

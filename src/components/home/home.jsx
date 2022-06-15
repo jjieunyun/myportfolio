@@ -30,12 +30,17 @@ const Home = forwardRef(({clickContact},ref) => {
                 <div className={styles.avatar}>
                     <img src={avatar} alt="avatar"/>
                 </div>
+                
                 <div className={styles.intro}>
                     <h1 className={styles.title}>Hello! I'm jieun Yun &#128077;</h1>
-                    <h3><span>Positive</span>긍정적인 마인드와</h3>
-                    <h3><span>passion</span>열정가득한 도전정신으로</h3>
-                    <h3><span>cooperation</span>함께 할때, 더욱 빛나는 Frontend Developer입니다.</h3>
-                    <button onClick={clickContact} className={styles.button}>Contact Me</button>
+                    <span className={styles.point}>Challenge</span>
+                    <h3>눈앞의 도전을 두려워하지 않고,</h3>
+                    <span className={styles.point}>Consistency</span>
+                    <h3>뚝심있게 성장하겠습니다.</h3>
+                    <span className={styles.point}>Cooperation</span>
+                    <h3>함께 할때 더욱 빛나는</h3>
+                    <h3>프론트엔드 개발자가 되겠습니다.</h3>
+                    {/* <button onClick={clickContact} className={styles.button}>Contact Me</button> */}
                 </div>
             </div>
         </section>
