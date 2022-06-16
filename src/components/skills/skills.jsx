@@ -2,13 +2,8 @@ import React, { forwardRef, useEffect } from 'react';
 import { useState } from 'react';
 import styles from './skills.module.css'
 
-<<<<<<< HEAD
-import ProgressBar from "@ramonak/react-progress-bar";
 
 const Skills = forwardRef(({},ref) => {
-=======
-const Skills = forwardRef((props,ref) => {
->>>>>>> 2482f4c6a50e07791d14f100a4633a40577d80f6
     const [scrollPosition, setScrollPosition] = useState(0);
     const [color,setColor] = useState(false)
 //⭐스크롤 관련 Effect
@@ -81,15 +76,7 @@ useEffect(()=>{
                                         <span className={styles.per}>99%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                        <ProgressBar 
-                                        customLabel=" "
-                                        className="wrapper"
-                                        
-                                        bgColor='orange'
-                                        completed={60}
-                                        height='5px'
-                                        />
-                                            {/* <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`}></div> */}
+                                            <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`}></div>
                                         </div>
                                     
                                 </div>

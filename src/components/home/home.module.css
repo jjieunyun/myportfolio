@@ -47,6 +47,7 @@
 
 .point {
     font-size: 3rem;
+    width: 20rem;
     font-family: fontMenu;
     color: transparent;
     -webkit-text-stroke-width: 0.1rem;
@@ -75,4 +76,9 @@
     color: makerOrange;
     outline: none;
 }
+
+
+
+/**/
+
 
