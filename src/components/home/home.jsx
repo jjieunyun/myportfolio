@@ -38,6 +38,8 @@ const Home = forwardRef((props,ref) => {
         });
     }, []);
 
+    // 도전부분에 사진넣기!!
+
 
     return (
         <section ref={ref} className={styles.home} data-name='home'>
