@@ -76,6 +76,7 @@
     width: 20rem;
     z-index: 2;
     /* display: none; */
+    animation:line_move 1s ease-in Infinite Alternate;
 }
 
 .first_letter {
@@ -151,6 +152,15 @@
 
 @keyframes line_move {
     0% {
-        left: 0
+        top: 0;
+        -webkit-filter: saturate(3); filter: saturate(3);
+    }
+    50% {
+        top: 10px;
+        
+    }
+    100% {
+        top: 20px;
+        -webkit-filter: saturate(0); filter: saturate(0);
     }
 }
