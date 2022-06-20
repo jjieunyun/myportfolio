@@ -8,7 +8,7 @@ const GithubButton = () => {
 
     return (
         <button className={styles.btn}>
-            <a  href='https://github.com/'>
+            <a  href='https://github.com/jjieunyun'>
                 <i class="fa-brands fa-github"></i>GitHub
             </a>
         </button>

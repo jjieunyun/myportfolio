@@ -6,6 +6,8 @@ import confetti from 'canvas-confetti';
 import { useCallback } from 'react';
 import { useReward } from 'react-rewards';
 
+import home_me from '../../imgs/home-4cut.png'
+
 
 const Home = forwardRef((props,ref) => {
     const divRef = useRef();
@@ -45,19 +47,32 @@ const Home = forwardRef((props,ref) => {
         <section ref={ref} className={styles.home} data-name='home'>
             <img className={styles.background} src={background} alt="" />
             <div className={styles.div_container} ref={divRef}>
-                <div className={styles.avatar}>
-                    <img src={avatar} alt="avatar"/>
-                </div>
                 
+                <div className={styles.avatar}>
+                <h1 className={styles.title}>Hello! I'm jieun Yun &#128077;</h1>
+                    <img className={styles.avatarIMG}  src={avatar} alt="avatar"/>
+                </div>
+                <div className={styles.home_cut_container}>
+                    <p className={styles.first_letter}>When I</p>
+                    <img className={styles.home_cut} src={home_me} alt="" />
+                    <p className={styles.second_letter}>was ...</p>
+                </div>
+
                 <div className={styles.intro}>
-                    <h1 className={styles.title}>Hello! I'm jieun Yun &#128077;</h1>
-                    <div id="emojiReward" onMouseEnter={() => { emojiReward()}} className={styles.point}>Challenge</div>
-                    <h3>눈앞의 도전을 두려워하지 않고,</h3>
-                    <div id="balloonsReward" onMouseEnter={() => { balloonsReward();}} className={styles.point}>Consistency</div>
-                    <h3>뚝심있게 성장하겠습니다.</h3>
-                    <div className={styles.point} onMouseEnter={onHover}>Cooperation</div>
-                    <h3>함께 할때 더욱 빛나는</h3>
-                    <h3>프론트엔드 개발자가 되겠습니다.</h3>
+                    <div className={styles.left1}>
+                        <div className={styles.point}  id="emojiReward" onMouseEnter={() => { emojiReward()}} >Challenge :</div>
+                        <h3>눈앞의 도전을 두려워하지 않고,</h3>
+                    </div>
+                    <div className={styles.right}>
+                        <div className={styles.point}  id="balloonsReward" onMouseEnter={() => { balloonsReward();}} >Consistency :</div>
+                        <h3>뚝심있게 성장하겠습니다.</h3>
+                    </div>
+                    <div className={styles.left2}>
+                        <div className={styles.point} onMouseEnter={onHover}>Cooperation +</div>
+                        <h3>함께 할때 더욱 빛나는</h3>
+                        <h3>프론트엔드 개발자가 되겠습니다.</h3>
+                    </div>
+                    
                     {/* <button onClick={clickContact} className={styles.button}>Contact Me</button> */}
                 </div>
                             {/* disabled={isConfettiAnimating || isBalloonsAnimating}
