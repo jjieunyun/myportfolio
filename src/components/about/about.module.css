@@ -8,15 +8,68 @@
     height: 150vh;
     background-color: makerOrange;
     padding-bottom: 3rem;
+    margin-top: 0;
 }
 
 .history {
     margin: auto;
     position: relative;
+    top: -2rem;
 }
+
+.intro_box {
+    position: absolute;
+    top: 22rem;
+    left: 5rem;
+    width: 30rem;
+    height: 8rem;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    color: makerBrown;
+}
+
+/*fontAswome*/
+.about_history_age, .about_history_edu  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about_history_age > div , .about_history_edu > div {
+    color: makerMint;
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    background-color: makerBrown;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(54, 44, 42) 0px 20px 30px -10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.about_history_age > div:hover , .about_history_edu > div:hover {
+    transform: rotateZ(45deg);
+    box-shadow: none;
+    color: makerOrange;
+} 
+
+.age, .edu {
+    line-height: 1.2rem;
+    margin: 0.7rem;
+    font-weight: bold;
+}
+
 
 .history_box {
     position: relative;
+    top: 5rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -34,7 +87,7 @@
 
 .intro {
     position: relative;
-    top: 30px;
+    top: 0px;
     margin: auto;
     height: 20rem;
     max-height: 23rem;
@@ -44,7 +97,24 @@
     color: makerBrown;
 }
 
+.point {
+    font-family: fontLogo;
+    font-size: 1.5rem;
+    text-shadow: makerMint 1px 1px 0px, #9C9C9C 2px 2px 0px;
+}
 
+.line {
+    position: relative;
+    display: inline-block;
+    height: 1px;
+    width: 400px;
+    margin-left: 1rem;
+    background-color: makerBrown;
+}
+
+.intro_box2 {
+    margin-top: 2rem;
+}
 
 .reason {
     max-width: 80%;
@@ -108,16 +178,9 @@
     margin-bottom: 0.5rem;
 }
 
-.age, .edu {
-    line-height: 1.2rem;
-    margin: 0.7rem;
-}
 
-.intro_box {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-}
+
+
 
 .job p {
     line-height: 1.8rem;

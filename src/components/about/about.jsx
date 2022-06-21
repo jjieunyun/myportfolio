@@ -7,35 +7,37 @@ const About = forwardRef((props,ref) => {
         <div className={styles.history}>
             <div className={styles.history_box}>
                 <h1>About Me</h1>
-                <div className={styles.intro}>
-                    <div className={styles.intro_box}>
+                <div className={styles.intro_box}>
                         <div className={styles.about_history_age}>
-                                <h3><i style={{fontSize:'1.7rem'}} className="fa-solid fa-cake-candles"></i></h3>
+                                <div><i style={{fontSize:'1.7rem'}} className="fa-solid fa-cake-candles"></i></div>
                                 <p className={styles.age}>1992. 05.07</p>
                         </div>
                         <div className={styles.about_history_edu}>
-                                <h3><i style={{fontSize:'1.7rem'}} className="fa-solid fa-graduation-cap"></i></h3>
+                                <div><i style={{fontSize:'1.7rem'}} className="fa-solid fa-graduation-cap"></i></div>
                                 <p className={styles.edu}>동아대학교 <br/>국제학부 중국학전공</p>
                         </div>
-                    </div>
+                </div>
+                <div className={styles.intro}>
                     <div className={styles.reason}>
-                        <h3>30대, Frontend 개발자에 도전하다.</h3>
-                        <p>30대, 남들이 봤을때 결코 적지않은 나이에 저는 '세번째' 직업에 도전을 하게되었습니다.
-                            20대의 저는 남들과 같이 대학에 진학했고, 남들이 하는 것 처럼 취업을 하며 카지노딜러로 살아가던 도중.. 
-                            지난 날의 저를 돌이켜 보니 저는 무엇인가를 만드는 것을 좋아하고, 몰두하는 것을 좋아하고,
-                            새로운것을 배우는것에 아주 흥미를 느끼는 사람이었습니다. 그렇게 Front-end개발자의 첫걸음을 시작하게 되었습니다.
-                            새로운 도전이 마냥 설레기만 한건 아닙니다. 보통의 30대 여성들이 추구하는 정착하는 삶과는 분명 차이가 있고,
-                            주변인들의 걱정하는 눈빛 또한 조금은 부담이 되기도 합니다. 하지만 그만큼 더 열정과 간절함을 가지고 시작했습니다. 
-                            오늘도 일을할때 행복을 느끼고 함께 성장 할수있는 Front-end개발자가 되겠습니다. 감사합니다.
+                        <span className={styles.point}>Challenge   </span ><span className={styles.line}></span>
+                        <h3 >30대, Frontend 개발자에 도전하다!</h3>
+                        <p>30대,결코 적지않은 나이에 '세번째' 직업에 도전하게 되었습니다.<br/>
+                            지난 날의 저는.. 남들 처럼 대학에 진학했고, 남들이 하는 것 처럼 취업에 성공해  카지노딜러로 살아가던 도중,
+                            문득 돌이켜 보니... <br/>저는 무엇인가를 만드는 것을 좋아하고, 몰두하는 것을 좋아하고,
+                            새로운것을 배우는것에 아주 흥미를 느끼는 사람이었습니다.<br/>
+                            세번째 기회인 만큼 좀 더 신중하고 간절한 마음으로 Front-end개발자의 첫걸음을 시작하게 되었습니다.<br/>
+                            오늘도 일을할때 행복을 느끼고 성장 하는 Front-end개발자가 되겠습니다. <br/>감사합니다.
                         </p>
-                        <h3>나는, 'ALL ROUND PLAYER'같은 개발자가 되고싶다.</h3>
-                        <p>
-                            Code의 Logic을 잘 이해하고 이를 구현하는 것은 개발자가 가져야 할 가장 중요한 역량이고 앞으로 제가 가장 노력해야 할 부분입니다. 
-                            이것 이외에, 제가 가장 자신있는 건 소통입니다. 
-                            학부시절 교내/외에서 만난 수많은 사람들과의 활동들과 다년간의 서비스직을 경험해본 저는,
-                            사람들과 소통하는 것은 누구보다 자신있습니다. 단순히 말을 잘 하는 사람이라는 의미가 아니라 상대방이 어떤 것을 원하는지 Needs를 잘 파악하고,
-                            긍정적인 분위기를 이끌어 가는 것에 자신있습니다. 사용자 UX/UI에 적합한 기능을 구현하고, 유관부서와의 협업과 소통을 잘 이끌어 내는 'ALL ROUND PLAYER'가 되겠습니다. 
-                        </p>
+                        <div className={styles.intro_box2}>
+                            <span className={styles.point}>Consistency </span> <span className={styles.line}></span>
+                            <h3>나는, 'ALL ROUND PLAYER'같은 개발자가 되고싶다.</h3>
+                            <p>
+                                제가 가장 자신있는 건 소통입니다. <br/>
+                                학부시절 교내/외에서 만난 수많은 사람들과의 활동들과 다년간의 서비스직을 경험해본 저는,
+                                사람들과 소통하는 것은 누구보다 자신있습니다. <br/>단순히 말을 잘 하는 사람이라는 의미가 아니라 상대방이 어떤 것을 원하는지 Needs를 잘 파악하고,
+                                긍정적인 분위기를 이끌어 가는 것에 자신있습니다. <br/>사용자 UX/UI에 적합한 기능을 구현하고, 유관부서와의 협업과 소통을 잘 이끌어 내는 'ALL ROUND PLAYER'가 되겠습니다. 
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
