@@ -6,6 +6,7 @@ import styles from './skills.module.css'
 const Skills = forwardRef(({},ref) => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [color,setColor] = useState(false)
+    
 //⭐스크롤 관련 Effect
 const updateScroll = () => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
@@ -44,7 +45,7 @@ useEffect(()=>{
                                         <span className={styles.per}>99%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                            <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`}></div>
+                                            <div className={styles.skill_value}></div>
                                         </div>
                                     
                                 </div>
@@ -55,7 +56,7 @@ useEffect(()=>{
                                         <span className={styles.per}>99%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                            <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`} ></div>
+                                            <div className={styles.skill_value}></div>
                                         </div>
                                 </div>
 
@@ -65,7 +66,7 @@ useEffect(()=>{
                                         <span className={styles.per}>99%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                            <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`}></div>
+                                            <div className={styles.skill_value}></div>
                                         </div>
                                     
                                 </div>
@@ -76,7 +77,7 @@ useEffect(()=>{
                                         <span className={styles.per}>99%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                            <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`}></div>
+                                            <div className={styles.skill_value}></div>
                                         </div>
                                     
                                 </div>
@@ -87,9 +88,18 @@ useEffect(()=>{
                                         <span className={styles.per}>99%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                            <div className={`${styles.skill_value} ${color? styles.active : styles.inactive}`}></div>
-                                        </div>
-                                    
+                                        <div className={styles.skill_value}></div>
+                                    </div>
+                                </div>
+
+                                <div className={styles.skill}>
+                                    <div className={styles.description}>
+                                        <span className={styles.lang}>JQuery</span>
+                                        <span className={styles.per}>99%</span>
+                                    </div>
+                                        <div className={styles.skill_bar}>
+                                        <div className={styles.skill_value}></div>
+                                    </div>
                                 </div>
                         </div>
 
@@ -101,6 +111,7 @@ useEffect(()=>{
                                     <li><span>Node.js Express</span></li>
                                     <li><span>FireBase</span></li>
                                     <li><span>Redux</span></li>
+                                    <li><span>PostCSS</span></li>
                                 </ul>
                             </div>
                             <div className={styles.etc}>
@@ -109,6 +120,9 @@ useEffect(()=>{
                                     <li><span>Git</span></li>
                                     <li><span>BLog</span></li>
                                     <li><span>Git Page</span></li>
+                                    <li><span>Vuetify</span></li>
+                                    <li><span>Bootstrap</span></li>
+                                    <li><span>React Router</span></li>
                                 </ul>
                             </div>
                         </div>

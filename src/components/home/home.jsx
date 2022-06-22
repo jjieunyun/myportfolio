@@ -13,7 +13,7 @@ const Home = forwardRef((props,ref) => {
     const divRef = useRef();
 
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [style, setStyle] = useState({visibility: 'hidden',  width: '8rem'})
+    const [style, setStyle] = useState({visibility: 'hidden',  width: '6rem'})
 
     // const {reward: confettiReward} = useReward('confettiReward', 'confetti');
     const {reward: balloonsReward} = useReward('balloonsReward', 'balloons');
@@ -31,11 +31,11 @@ const Home = forwardRef((props,ref) => {
     });
 
     const changeStyle = () => {
-        setStyle({visibility: 'visible',  width: '12rem'})
+        setStyle({visibility: 'visible',  width: '10rem'})
     }
 
     const closeStyle = () => {
-        setStyle({visibility: 'hidden',  width: '8rem'})
+        setStyle({visibility: 'hidden',  width: '6rem'})
     }
 
 

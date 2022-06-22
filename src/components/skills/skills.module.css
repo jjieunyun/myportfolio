@@ -5,10 +5,12 @@
 .skills {
     background-color: makerGreen;
     text-align: center;
-    height: 100vh;
+    height: 120vh;
 }
 
 .container {
+    position: relative;
+    top: 4rem;
     padding-top: 0rem;
     max-width: 80%;
     margin: auto;
@@ -28,6 +30,7 @@
     border-radius: Radius;
     color: makerBrown;
     margin: 20px 0;
+    height: 34rem;
 }
 
 .bar {
@@ -54,7 +57,7 @@
 
 .skillset_container {
     display: flex;
-    height: 400px;
+    height: 31.2rem;
 }
 
 .skillset_title {
@@ -106,9 +109,6 @@
     /* border-radius: 50px;
     background-color: orange; */
     transition: all 0.2s ease-in;
-}
-
-.active {
     border-radius: 50px;
     background-color: orange;
     left: 0;
@@ -117,7 +117,6 @@
     transition:all 0.5s ease-in;
     transition-property: color, width;
 }
-
 
 
 

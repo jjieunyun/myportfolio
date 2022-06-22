@@ -3,7 +3,7 @@
 
 .home {
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
 }
 
 .div_container {
@@ -16,14 +16,14 @@
     top: 0;
     left: 30%;
     width: 70%;
-    height: 105%;
+    height: 120vh;
     z-index: -100;
     object-fit: cover;
 }
 
 .title {
     position: relative;
-    top: 15vh;
+    top: 10vh;
     left: -2vw;
     font-size: 1.5rem;
     font-family: fontLogo;
@@ -33,9 +33,9 @@
 
 .avatar {
     position: absolute;
-    top: 21%;
+    top: 35%;
     bottom:0;
-    left: 20%;
+    left: 23%;
     margin: 0;
 }
 
@@ -47,7 +47,7 @@
     height: 60vh;
     width: 700px;
     position: relative;
-    top: 230px;
+    top: 30%;
     left: 50%;
     white-space: normal;
     word-wrap:break-word;
