@@ -6,6 +6,7 @@
     margin: auto;
     max-width: 100%;
     height: 172vh;
+    max-height: fit-content;
     background-color: makerOrange;
     padding-bottom: 3rem;
     margin-top: 0;
@@ -15,6 +16,24 @@
     margin: auto;
     position: relative;
     top: -2rem;
+}
+
+.history_box {
+    position: relative;
+    top: 10rem;
+    left: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.history_box > h1 {
+    padding-top: 0rem;
+    font-size: titleSize;
+    font-family: fontMenu;
+    color: makerBrown;
+    padding-left: 10rem;
+    margin-top: 12rem;
 }
 
 .intro_box {
@@ -67,32 +86,16 @@
 }
 
 
-.history_box {
-    position: relative;
-    top: 10rem;
-    left: 5rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 
-.history_box > h1 {
-    padding-top: 0rem;
-    font-size: titleSize;
-    font-family: fontMenu;
-    color: makerBrown;
-    padding-left: 10rem;
-    margin-top: 12rem;
-}
 
 .intro {
     position: relative;
-    top: 0px;
+    top: 8vh;
     margin: auto;
     height: 20rem;
     max-height: 23rem;
     max-width: 43rem;
-    width:43rem;
+    width: 43rem;
     margin-top: 4.7rem;
     color: makerBrown;
     max-width: 80%;
@@ -116,7 +119,7 @@
     position: relative;
     display: inline-block;
     height: 1px;
-    width: 400px;
+    width: 500px;
     margin-left: 1rem;
     background-color: makerBrown;
 }

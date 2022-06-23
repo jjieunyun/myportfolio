@@ -4,8 +4,11 @@
 
 .skills {
     background-color: makerGreen;
-    text-align: center;
     height: 120vh;
+}
+
+ul {
+    list-style: none;
 }
 
 .container {
@@ -17,6 +20,7 @@
 }
 
 .container > h1 {
+    text-align: center;
     padding-top: 6rem;
     font-size: titleSize;
     font-family: fontMenu;
@@ -25,6 +29,7 @@
 }
 
 .skillset {
+
     background-color: makerWhite;
     border: 2px solid makerBrown;
     border-radius: Radius;
@@ -61,6 +66,7 @@
 }
 
 .skillset_title {
+    text-align: center;
     margin-bottom: 0.8rem;
     font-size: 1.5rem;
     font-family: fontLogo;
@@ -76,6 +82,10 @@
 
 .skillset_right {
     flex-basis: 40%;
+}
+
+.tools_list img {
+    width: 50px;
 }
 
 .description {
@@ -104,18 +114,39 @@
 }
 
 .skill_value {
-    width: 90%;
+    width: 0%;
     height: 5px;
-    /* border-radius: 50px;
-    background-color: orange; */
-    transition: all 0.2s ease-in;
     border-radius: 50px;
     background-color: orange;
     left: 0;
     top: 0;
+    visibility: hidden;
+    animation: alternate line 1.5s ease-in;
+    transition: width 1.5s ease-in;
+}
+
+.value1 {
     width: 90%;
-    transition:all 0.5s ease-in;
-    transition-property: color, width;
+}
+
+.value2 {
+    width: 90%;
+}
+
+.value3 {
+    width: 80%;
+}
+
+.value4 {
+    width: 70%;
+}
+
+.value5 {
+    width: 70%;
+}
+
+.value6{
+    width: 60%;
 }
 
 
@@ -123,3 +154,14 @@
 .tools, .etc {
     padding: 0.5rem;
 }
+
+@keyframes line {
+    0% {
+        width: 0%;
+    }
+    100% {
+        
+    }
+}
+
+

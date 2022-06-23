@@ -22,8 +22,9 @@ const Home = forwardRef((props,ref) => {
 
     const updateScroll = () => {
         setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-        const homeHeight = divRef.current.getBoundingClientRect().height
+        const homeHeight = divRef.current.clientHeight
         divRef.current.style.opacity = 1-scrollPosition / homeHeight;
+        
     }
 
     useEffect(()=>{
