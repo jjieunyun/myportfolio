@@ -23,14 +23,19 @@ import vuetify from '../../imgs/stack/vuetifyjs.svg'
 const Skills = forwardRef((props,ref) => {
     const skillsRef = useRef();
 
+    const htmlRef = useRef();
+    const cssRef = useRef();
+    const jsRef = useRef();
+    const reactRef = useRef();
+    const vueRef = useRef();
+    const jqueryRef = useRef();
+    const nodeRef = useRef();
+
     const [barStyles, setBarStyles] = useState({width: '0%'});
 
 const handleScroll = useCallback(([entry]) => {
         const { current } = skillsRef;
-        
-        
         if(entry.isIntersecting) {
-        console.log(current)
         setBarStyles({visibility: 'visible', })
     }
 }, []);
@@ -46,13 +51,21 @@ useEffect(() => {
     };
 }, [handleScroll]);
 
+//⭐ 기술스택아이콘 hover함수
 
+
+const hoverHtml = () => {
+
+}
+
+const leaveHtml = () => {
+    
+}
 
     return (
         <section ref={ref} className={styles.skills}>
             <div className={styles.container}>
             <h1>Skills & Attributes</h1>
-            <p>스킬과 관련된 나의 부가적인 설명</p>
                 <div ref={skillsRef} className={styles.skillset}>
                     <div className={styles.bar}>
                             <div></div><div></div><div></div>
@@ -67,12 +80,11 @@ useEffect(() => {
                                         <span  className={styles.per}>90%</span>
                                     </div>
                                         <div className={styles.skill_bar}>
-                                            <div style={barStyles} className={`${styles.skill_value} ${styles.value1}`}></div>
+                                            <div ref={htmlRef} style={barStyles} className={`${styles.skill_value} ${styles.value1}`}></div>
                                         </div>
-                                    
                                 </div>
 
-                                <div className={styles.skill}>
+                                <div ref={cssRef} className={styles.skill}>
                                     <div className={styles.description}>
                                         <span className={styles.lang}>CSS</span>
                                         <span className={styles.per}>90%</span>
@@ -82,7 +94,7 @@ useEffect(() => {
                                         </div>
                                 </div>
 
-                                <div className={styles.skill}>
+                                <div ref={jsRef} className={styles.skill}>
                                     <div className={styles.description}>
                                         <span className={styles.lang}>JavaScript</span>
                                         <span className={styles.per}>80%</span>
@@ -93,7 +105,7 @@ useEffect(() => {
                                     
                                 </div>
 
-                                <div className={styles.skill}>
+                                <div ref={reactRef} className={styles.skill}>
                                     <div className={styles.description}>
                                         <span className={styles.lang}>React</span>
                                         <span className={styles.per}>70%</span>
@@ -104,7 +116,7 @@ useEffect(() => {
                                     
                                 </div>
 
-                                <div className={styles.skill}>
+                                <div ref={vueRef} className={styles.skill}>
                                     <div className={styles.description}>
                                         <span className={styles.lang}>Vue.js</span>
                                         <span className={styles.per}>70%</span>
@@ -114,7 +126,7 @@ useEffect(() => {
                                     </div>
                                 </div>
 
-                                <div className={styles.skill}>
+                                <div ref={jqueryRef} className={styles.skill}>
                                     <div className={styles.description}>
                                         <span className={styles.lang}>JQuery</span>
                                         <span className={styles.per}>60%</span>
@@ -123,39 +135,43 @@ useEffect(() => {
                                         <div style={barStyles} className={`${styles.skill_value} ${styles.value6}`}></div>
                                     </div>
                                 </div>
+
+                                <div ref={nodeRef} className={styles.skill}>
+                                    <div className={styles.description}>
+                                        <span className={styles.lang}>Node.js</span>
+                                        <span className={styles.per}>40%</span>
+                                    </div>
+                                        <div className={styles.skill_bar}>
+                                        <div style={barStyles} className={`${styles.skill_value} ${styles.value7}`}></div>
+                                    </div>
+                                </div>
                         </div>
 
                         {/*tool, Etc*/}
                         <div className={styles.skillset_right}>
                             <div className={styles.tools}>
-                                <h3 className={styles.skillset_title}>Tools</h3>
                                 <ul className={styles.tools_list}>
-                                    <img src={bootstrap} alt="" />
+                                    <img onMouseOver={()=>hoverHtml()} onMouseLeave={leaveHtml} src={html} alt="" />
                                     <img src={css} alt="" />
-                                    <img src={express} alt="" />
-                                    <img src={firebase} alt="" />
-                                    <img src={github} alt="" />
-                                    <img src={html} alt="" />
-                                    <img src={js} alt="" />
-                                    <img src={jquery} alt="" />
                                     <img src={postcss} alt="" />
-                                    <img src={router} alt="" />
+                                    <img src={bootstrap} alt="" />
+                                    <img src={js} alt="" />
                                     <img src={react} alt="" />
+                                    <img src={router} alt="" />
                                     <img src={redux} alt="" />
                                     <img src={vue} alt="" />
                                     <img src={vuetify} alt="" />
+                                    <img src={jquery} alt="" />
+                                    <img src={express} alt="" />
+                                    <img src={firebase} alt="" />
+                                    <img src={github} alt="" />
                                 </ul>
                             </div>
                             <div className={styles.etc}>
                                 <h3 className={styles.skillset_title}>Details</h3>
-                                <ul className={styles.etc_list}>
-                                    <li><span>Git</span></li>
-                                    <li><span>BLog</span></li>
-                                    <li><span>Git Page</span></li>
-                                    <li><span>Vuetify</span></li>
-                                    <li><span>Bootstrap</span></li>
-                                    <li><span>React Router</span></li>
-                                </ul>
+                                <div className={styles.etc_list}>
+                                    <p>HTML5표준 웹</p>
+                                </div>
                             </div>
                         </div>
                     </div>

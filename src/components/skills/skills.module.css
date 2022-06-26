@@ -4,7 +4,7 @@
 
 .skills {
     background-color: makerGreen;
-    height: 120vh;
+    height: 110vh;
 }
 
 ul {
@@ -13,7 +13,7 @@ ul {
 
 .container {
     position: relative;
-    top: 4rem;
+    top: 2.5rem;
     padding-top: 0rem;
     max-width: 80%;
     margin: auto;
@@ -35,7 +35,7 @@ ul {
     border-radius: Radius;
     color: makerBrown;
     margin: 20px 0;
-    height: 34rem;
+    height: 41rem;
 }
 
 .bar {
@@ -62,7 +62,7 @@ ul {
 
 .skillset_container {
     display: flex;
-    height: 31.2rem;
+    height: 38.3rem;
 }
 
 .skillset_title {
@@ -91,6 +91,7 @@ ul {
 .description {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0.2rem;
 }
 
 .lang {
@@ -103,19 +104,19 @@ ul {
 }
 
 .skill {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .skill_bar {
     width: 100%;
-    height: 5px;
+    height: 8px;
     border-radius: 50px;
     background-color: grey;
 }
 
 .skill_value {
     width: 0%;
-    height: 5px;
+    height: 8px;
     border-radius: 50px;
     background-color: orange;
     left: 0;
@@ -124,6 +125,8 @@ ul {
     animation: alternate line 1.5s ease-in;
     transition: width 1.5s ease-in;
 }
+
+
 
 .value1 {
     width: 90%;
@@ -149,6 +152,10 @@ ul {
     width: 60%;
 }
 
+.value7{
+    width: 40%;
+}
+
 
 
 .tools, .etc {
@@ -162,6 +169,21 @@ ul {
     100% {
         
     }
+}
+
+/*skillset_right (이미지 사진들)*/
+
+.tools_list img {
+    width: 70px;
+    height: 70px;
+    margin: 0.7rem;
+    cursor: pointer;
+}
+
+.tools_list img:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
 }
 
 
