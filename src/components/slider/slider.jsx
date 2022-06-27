@@ -16,7 +16,7 @@ import bookflix from '../../imgs/bookflix_screenshot.png'
         initial: 0,
         slides: {
             perView: 5,
-            spacing:10,
+            spacing:20,
         },
         },
         [ThumbnailPlugin(instanceRef)]
@@ -76,10 +76,69 @@ import bookflix from '../../imgs/bookflix_screenshot.png'
                 </div>
             </div>
 
-            <div className="keen-slider__slide number-slide2">2</div>
-            <div className="keen-slider__slide number-slide3">3</div>
-            <div className="keen-slider__slide number-slide4">4</div>
-            <div className="keen-slider__slide number-slide5">5</div>
+            <div className="keen-slider__slide number-slide2">
+                <div className='img_container'>
+                    <img className='mainIMG' src={example} alt="" />
+                </div>
+                    <div className='slide_card'>
+                        <div className='slide__bar'>
+                        <div></div><div></div><div></div>
+                        </div>
+                    <h3>Portfolio Site</h3>
+                    <p>Html CSS React 아이콘 찾아서 넣기</p>
+                    <p>간단하게 사이트 설명 넣기</p>
+                    <button>깃헙</button>
+                    <button>View Demo</button>
+                </div>
+            </div>
+
+            <div className="keen-slider__slide number-slide3">
+                <div className='img_container'>
+                    <img className='mainIMG' src={example} alt="" />
+                </div>
+                    <div className='slide_card'>
+                        <div className='slide__bar'>
+                        <div></div><div></div><div></div>
+                        </div>
+                    <h3>Portfolio Site</h3>
+                    <p>Html CSS React 아이콘 찾아서 넣기</p>
+                    <p>간단하게 사이트 설명 넣기</p>
+                    <button>깃헙</button>
+                    <button>View Demo</button>
+                </div>
+            </div>
+
+            <div className="keen-slider__slide number-slide4">
+                <div className='img_container'>
+                    <img className='mainIMG' src={example} alt="" />
+                </div>
+                    <div className='slide_card'>
+                        <div className='slide__bar'>
+                        <div></div><div></div><div></div>
+                        </div>
+                    <h3>Portfolio Site</h3>
+                    <p>Html CSS React 아이콘 찾아서 넣기</p>
+                    <p>간단하게 사이트 설명 넣기</p>
+                    <button>깃헙</button>
+                    <button>View Demo</button>
+                </div>
+            </div>
+
+            <div className="keen-slider__slide number-slide5">
+                <div className='img_container'>
+                    <img className='mainIMG' src={example} alt="" />
+                </div>
+                    <div className='slide_card'>
+                        <div className='slide__bar'>
+                        <div></div><div></div><div></div>
+                        </div>
+                    <h3>Portfolio Site</h3>
+                    <p>Html CSS React 아이콘 찾아서 넣기</p>
+                    <p>간단하게 사이트 설명 넣기</p>
+                    <button>깃헙</button>
+                    <button>View Demo</button>
+                </div>
+            </div>
         </div>
 
         <div ref={thumbnailRef} className="keen-slider thumbnail">
