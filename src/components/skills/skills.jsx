@@ -51,16 +51,89 @@ useEffect(() => {
     };
 }, [handleScroll]);
 
+useEffect(()=>{
+    setDetails([])
+})
+
+const [details, setDetails] = useState([])
 //⭐ 기술스택아이콘 hover함수
-
-
 const hoverHtml = () => {
-
+    setDetails([
+        'HTML5웹 표준을 준수하고자 노력합니다.',
+        '시멘틱웹을 이해하고 구조적으로 마크업할 수 있습니다.'
+    ])
 }
 
-const leaveHtml = () => {
-    
+const hoverCSS = () => {
+    return (
+        <ul className={styles.etc_list}>
+            <li>Sass와 같은 CSS Preprocessor 를 사용할 수 있습니다.</li>
+            <li>PostCSS 및 BootStrap등 CSS 라이브러리를 사용할 수 있습니다.</li>                 
+            <li>keyframes를 활용한 간단한 애니메이션을 구현할 수있습니다.</li>
+            <li>반응형 페이지를 적용할 수 있습니다.</li>
+            <li>Sass와 같은 CSS Preprocessor 를 사용할 수 있습니다.</li>
+        </ul>
+    )
 }
+
+const hoverJs = () => {
+    return (
+        <ul className={styles.etc_list}>
+            <li>ES6 문법을 활용해 웹 어플리케이션을 개발할 수 있습니다.</li>
+            <li>Vanilla JS 를 이용해 DOM을 조작할 수 있습니다.</li>                 
+            <li>reduce, map, filter 등 다양한 고차함수를 적극적으로 활용합니다.</li>
+        </ul>
+    )
+}
+
+const hoverVue = () => {
+    return (
+        <ul className={styles.etc_list}>
+            <li>Vue의 컴포넌트 라이프사이클을 각 상황에 맞게 잘 적용합니다.</li>
+            <li>vuex, vueRouter 등의 관련 라이브러리를 사용하여 페이지를 제작할 수 있습니다.</li>                 
+            <li>Vutify라이브러리를 활용하여 UI를 제작할 수있습니다.</li>
+        </ul>
+    )
+}
+
+const hoverReact = () => {
+    return (
+        <ul className={styles.etc_list}>
+            <li>함수형 컴포넌트로 SPA를 이해하고 작성할 수있습니다.</li>
+            <li>React Hooks를 이해하고 컴포넌트를 설계할 수있습니다.</li>                 
+            <li>Redux Toolkit을 활용하여 데이터 상태관리, Thunk를 활용한 비동기 작업을 할 수있습니다.</li>
+            <li>React Router 라이브러리를 사용해 페이지를 제작 할 수있습니다.</li>
+        </ul>
+    )
+}
+
+const hoverNode = () => {
+    return (
+        <ul className={styles.etc_list}>
+            <li>Express.js를 이용해 REST API 를 작성할 수 있습니다.</li>
+            <li>현재 Node.js를 통해서 백엔드 기초를 공부하고 있습니다.</li>                 
+        </ul>
+    )
+}
+
+const hoverGit = () => {
+    return (
+        <ul className={styles.etc_list}>
+            <li>Git Hub를 활용한 팀프로젝트 경험이 있습니다.</li>                
+        </ul>
+    )
+}
+
+const hoverFirebase = () => {
+    return (
+        <ul className={styles.etc_list}>
+            <li>Google, GitHub 등을 활용한 인증 및 로그인을 구현할 수 있습니다.</li>                
+            <li>Realtiem Database를 활용해 웹페이지에서 데이터 읽기,쓰기,수정,삭제를 구현할 수 있습니다.</li>
+            <li>Cloudinary를 활용하여 비동기로 웹페이지를 구현한 경험이 있습니다.</li>
+        </ul>
+    )
+}
+
 
     return (
         <section ref={ref} className={styles.skills}>
@@ -151,7 +224,7 @@ const leaveHtml = () => {
                         <div className={styles.skillset_right}>
                             <div className={styles.tools}>
                                 <ul className={styles.tools_list}>
-                                    <img onMouseOver={()=>hoverHtml()} onMouseLeave={leaveHtml} src={html} alt="" />
+                                    <img onMouseOver={hoverHtml} src={html} alt="" />
                                     <img src={css} alt="" />
                                     <img src={postcss} alt="" />
                                     <img src={bootstrap} alt="" />
@@ -169,9 +242,10 @@ const leaveHtml = () => {
                             </div>
                             <div className={styles.etc}>
                                 <h3 className={styles.skillset_title}>Details</h3>
-                                <div className={styles.etc_list}>
-                                    <p>HTML5표준 웹</p>
-                                </div>
+                                {
+                                    details? (<p>아무것도 hover하지 않았을때 나오는 문구 </p>) :
+                                    ({details})
+                                }
                             </div>
                         </div>
                     </div>

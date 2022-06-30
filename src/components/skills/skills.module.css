@@ -84,9 +84,6 @@ ul {
     flex-basis: 40%;
 }
 
-.tools_list img {
-    width: 50px;
-}
 
 .description {
     display: flex;
@@ -171,12 +168,12 @@ ul {
     }
 }
 
-/*skillset_right (이미지 사진들)*/
+
 
 .tools_list img {
     width: 70px;
     height: 70px;
-    margin: 0.7rem;
+    margin: 0.5rem;
     cursor: pointer;
 }
 
