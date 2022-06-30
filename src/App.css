@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Gowun+Dodum&family=Noto+Sans:wght@300;400;500&family=Pacifico&family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&family=Gowun+Dodum&family=Noto+Sans:wght@300;400;500&family=Pacifico&family=Paytone+One&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,7 +6,8 @@
 
 body {
     margin: 0;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    /* font-family: 'IBM Plex Sans KR', sans-serif; */
     cursor: default;
     overflow-x: hidden;
 }

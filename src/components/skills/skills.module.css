@@ -183,4 +183,39 @@ ul {
     transition: all 0.3s ease-in-out;
 }
 
+.details {
+    text-align: center;
+}
 
+.details_none_box {
+    position: relative;
+    height: 200px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.details_question {
+    display: flex;
+    justify-content: center;
+    color: rgba(0, 30, 128, 0.53);
+    font-size: 4rem;
+}
+
+.details_pointer {
+    position: absolute;
+    left: 54%;
+    font-size: 3rem;
+    color: rgb(227, 225, 225);
+    filter: drop-shadow(3px 5px 2px rgba(47, 47, 47, 0.766));
+    /* background-color:rgb(255, 0, 191);*/
+    animation: alternate infinite click 0.3s;
+} 
+
+@keyframes click {
+    0% {
+        top: 20%;
+    }
+    100% {
+        top: 18%;
+    }
+}

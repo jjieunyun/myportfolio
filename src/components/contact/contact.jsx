@@ -16,12 +16,12 @@ const Contact = forwardRef((props,ref) => {
             <GithubButton/>
                 <div className={styles.icon_container}>
                     <a className={styles.icon} href='https://github.com/'>
-                        <i class="fa-solid fa-envelope"></i>
+                        <i className="fa-solid fa-envelope"></i>
                     </a>
                 </div>
                 <div className={styles.icon_container}>
                     <a className={styles.icon} href='https://github.com/'>
-                        <i class="fa-solid fa-phone"></i>
+                        <i className="fa-solid fa-phone"></i>
                     </a>
                 </div>
             </div>

@@ -32,6 +32,7 @@ const Skills = forwardRef((props,ref) => {
     const nodeRef = useRef();
 
     const [barStyles, setBarStyles] = useState({width: '0%'});
+    const [details, setDetails] = useState(null)
 
 const handleScroll = useCallback(([entry]) => {
         const { current } = skillsRef;
@@ -51,12 +52,12 @@ useEffect(() => {
     };
 }, [handleScroll]);
 
-useEffect(()=>{
-    setDetails([])
-})
 
-const [details, setDetails] = useState([])
 //⭐ 기술스택아이콘 hover함수
+const removeHover = () => {
+    setDetails(null)
+}
+
 const hoverHtml = () => {
     setDetails([
         'HTML5웹 표준을 준수하고자 노력합니다.',
@@ -65,73 +66,66 @@ const hoverHtml = () => {
 }
 
 const hoverCSS = () => {
-    return (
-        <ul className={styles.etc_list}>
-            <li>Sass와 같은 CSS Preprocessor 를 사용할 수 있습니다.</li>
-            <li>PostCSS 및 BootStrap등 CSS 라이브러리를 사용할 수 있습니다.</li>                 
-            <li>keyframes를 활용한 간단한 애니메이션을 구현할 수있습니다.</li>
-            <li>반응형 페이지를 적용할 수 있습니다.</li>
-            <li>Sass와 같은 CSS Preprocessor 를 사용할 수 있습니다.</li>
-        </ul>
-    )
+    setDetails([
+        'Sass와 같은 CSS Preprocessor 를 사용할 수 있습니다.',
+        'PostCSS 및 BootStrap등 CSS 라이브러리를 사용할 수 있습니다.',
+        'keyframes를 활용한 간단한 애니메이션을 구현할 수있습니다.',
+        '반응형 페이지를 적용할 수 있습니다.',
+        'Sass와 같은 CSS Preprocessor 를 사용할 수 있습니다.'
+    ])
 }
 
 const hoverJs = () => {
-    return (
-        <ul className={styles.etc_list}>
-            <li>ES6 문법을 활용해 웹 어플리케이션을 개발할 수 있습니다.</li>
-            <li>Vanilla JS 를 이용해 DOM을 조작할 수 있습니다.</li>                 
-            <li>reduce, map, filter 등 다양한 고차함수를 적극적으로 활용합니다.</li>
-        </ul>
-    )
+    setDetails([
+        'ES6 문법을 활용해 웹 어플리케이션을 개발할 수 있습니다.',
+        'Vanilla JS 를 이용해 DOM을 조작할 수 있습니다.',
+        'reduce, map, filter 등 다양한 고차함수를 적극적으로 활용합니다.'
+    ])
 }
 
 const hoverVue = () => {
-    return (
-        <ul className={styles.etc_list}>
-            <li>Vue의 컴포넌트 라이프사이클을 각 상황에 맞게 잘 적용합니다.</li>
-            <li>vuex, vueRouter 등의 관련 라이브러리를 사용하여 페이지를 제작할 수 있습니다.</li>                 
-            <li>Vutify라이브러리를 활용하여 UI를 제작할 수있습니다.</li>
-        </ul>
-    )
+    setDetails([
+        'Vue의 컴포넌트 라이프사이클을 각 상황에 맞게 잘 적용합니다.',
+        '라이브러리를 사용하여 페이지를 제작할 수 있습니다.',
+        'Vutify라이브러리를 활용하여 UI를 제작할 수있습니다.'
+    ])
 }
 
 const hoverReact = () => {
-    return (
-        <ul className={styles.etc_list}>
-            <li>함수형 컴포넌트로 SPA를 이해하고 작성할 수있습니다.</li>
-            <li>React Hooks를 이해하고 컴포넌트를 설계할 수있습니다.</li>                 
-            <li>Redux Toolkit을 활용하여 데이터 상태관리, Thunk를 활용한 비동기 작업을 할 수있습니다.</li>
-            <li>React Router 라이브러리를 사용해 페이지를 제작 할 수있습니다.</li>
-        </ul>
-    )
+    setDetails([
+        '함수형 컴포넌트로 SPA를 이해하고 작성할 수있습니다.',
+        'React Hooks를 이해하고 컴포넌트를 설계할 수있습니다.',
+        'Redux Toolkit을 활용하여 데이터 상태관리, Thunk를 활용한 비동기 작업을 할 수있습니다.',
+        'React Router 라이브러리를 사용해 페이지를 제작 할 수있습니다.'
+    ])
+}
+
+const hoverJquery = () =>{
+    setDetails([
+        'Dom구조를 이해하고 조작할 수있습니다.',
+        'Jquery라이브러리를 적절하게 사용할 수있습니다.'
+    ])
 }
 
 const hoverNode = () => {
-    return (
-        <ul className={styles.etc_list}>
-            <li>Express.js를 이용해 REST API 를 작성할 수 있습니다.</li>
-            <li>현재 Node.js를 통해서 백엔드 기초를 공부하고 있습니다.</li>                 
-        </ul>
-    )
+    setDetails([
+        'Express.js를 이용해 REST API 를 작성할 수 있습니다.',
+        '현재 Node.js를 통해서 백엔드 기초를 공부하고 있습니다.'
+    ])
 }
 
 const hoverGit = () => {
-    return (
-        <ul className={styles.etc_list}>
-            <li>Git Hub를 활용한 팀프로젝트 경험이 있습니다.</li>                
-        </ul>
-    )
+    setDetails([
+        'Git Hub를 활용한 팀프로젝트 경험이 있습니다.'
+    ])
 }
 
 const hoverFirebase = () => {
-    return (
-        <ul className={styles.etc_list}>
-            <li>Google, GitHub 등을 활용한 인증 및 로그인을 구현할 수 있습니다.</li>                
-            <li>Realtiem Database를 활용해 웹페이지에서 데이터 읽기,쓰기,수정,삭제를 구현할 수 있습니다.</li>
-            <li>Cloudinary를 활용하여 비동기로 웹페이지를 구현한 경험이 있습니다.</li>
-        </ul>
-    )
+    setDetails([
+        'Google, GitHub 등을 활용한 인증 및 로그인을 구현할 수 있습니다.',
+        'Realtiem Database를 활용해 웹페이지에서 데이터 읽기,쓰기,수정,삭제를 구현할 수 있습니다.',
+        'Cloudinary를 활용하여 비동기로 웹페이지를 구현한 경험이 있습니다.'
+    ])
 }
 
 
@@ -224,27 +218,35 @@ const hoverFirebase = () => {
                         <div className={styles.skillset_right}>
                             <div className={styles.tools}>
                                 <ul className={styles.tools_list}>
-                                    <img onMouseOver={hoverHtml} src={html} alt="" />
-                                    <img src={css} alt="" />
-                                    <img src={postcss} alt="" />
-                                    <img src={bootstrap} alt="" />
-                                    <img src={js} alt="" />
-                                    <img src={react} alt="" />
-                                    <img src={router} alt="" />
-                                    <img src={redux} alt="" />
-                                    <img src={vue} alt="" />
-                                    <img src={vuetify} alt="" />
-                                    <img src={jquery} alt="" />
-                                    <img src={express} alt="" />
-                                    <img src={firebase} alt="" />
-                                    <img src={github} alt="" />
+                                    <img onMouseOver={hoverHtml} onMouseLeave={removeHover} src={html} alt="html" />
+                                    <img onMouseOver={hoverCSS} onMouseLeave={removeHover} src={css} alt="css" />
+                                    <img onMouseOver={hoverCSS} onMouseLeave={removeHover} src={postcss} alt="postcss" />
+                                    <img onMouseOver={hoverCSS} onMouseLeave={removeHover} src={bootstrap} alt="bootstrap" />
+                                    <img onMouseOver={hoverJs} onMouseLeave={removeHover} src={js} alt="js" />
+                                    <img onMouseOver={hoverReact} onMouseLeave={removeHover} src={react} alt="react" />
+                                    <img onMouseOver={hoverReact} onMouseLeave={removeHover} src={router} alt="router" />
+                                    <img onMouseOver={hoverReact} onMouseLeave={removeHover} src={redux} alt="redux" />
+                                    <img onMouseOver={hoverVue} onMouseLeave={removeHover} src={vue} alt="vue" />
+                                    <img onMouseOver={hoverVue} onMouseLeave={removeHover} src={vuetify} alt="vuetify" />
+                                    <img onMouseOver={hoverJquery} onMouseLeave={removeHover} src={jquery} alt="jquery" />
+                                    <img onMouseOver={hoverNode} onMouseLeave={removeHover} src={express} alt="express" />
+                                    <img onMouseOver={hoverFirebase}onMouseLeave={removeHover} src={firebase} alt="firebase" />
+                                    <img onMouseOver={hoverGit} onMouseLeave={removeHover} src={github} alt="github" />
                                 </ul>
                             </div>
                             <div className={styles.etc}>
                                 <h3 className={styles.skillset_title}>Details</h3>
                                 {
-                                    details? (<p>아무것도 hover하지 않았을때 나오는 문구 </p>) :
-                                    ({details})
+                                    details === null ? (
+                                        <div className={styles.details_none_box}>
+                                            <p className={styles.details_question}><i className="fa-solid fa-circle-question"></i></p>
+                                            <p className={styles.details_pointer}><i className="fa-solid fa-arrow-pointer"></i></p>
+                                        </div>
+                                    ) 
+                                    : (
+                                    details.map((item,index) => {
+                                        return <p className={styles.details}  key={index}>{item}</p>
+                                    }))
                                 }
                             </div>
                         </div>
