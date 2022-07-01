@@ -2,10 +2,22 @@ import React, { useState } from "react"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import  './slider.css'
+
+/* 이미지파일*/
 import example from '../../imgs/reading_log.png'
-import bookflix from '../../imgs/bookflix_screenshot.png'
+import uptown from '../../imgs/uptown.png'
+import booklog from '../../imgs/booklog.png'
+import bookflix from '../../imgs/bookflix.png'
+import youtube from '../../imgs/youtube.png'
+import portfilio from '../../imgs/port.png'
+
+
 import ModalUptown from '../modal/modalUptown'
 import ModalPortfolio from '../modal/modalPortfolio'
+import ModalBooklog from '../modal/modalBooklog'
+import ModalYoutube from '../modal/modalYoutube'
+import ModalBookflix from '../modal/modalBookflix'
+import { useRef } from 'react'
 
 
 
@@ -63,18 +75,38 @@ import ModalPortfolio from '../modal/modalPortfolio'
 
         const showModalUptown = () => {
             document.body.style.overflow = "hidden";
-            setModalList('madalUptown')
+            setModalList('modalUptown')
         }
 
         const showModalPortfolio = () => {
             document.body.style.overflow = "hidden";
-            setModalList('madlPortfolio')
+            setModalList('modlPortfolio')
         }
 
+        const showModalBooklog = () => {
+            document.body.style.overflow = "hidden";
+            setModalList('modlBooklog')
+        }
+
+        const showModalYoubube = () => {
+            document.body.style.overflow = "hidden";
+            setModalList('modalYoutube')
+        }
+
+        const showModalBookFlix = () => {
+            document.body.style.overflow = "hidden";
+            setModalList('modalBookflix')
+        }
+
+        /*모달창 클릭하면 사라지게할때 필요한 REf*/ 
+        const divRef = useRef();
     return (
-        <section className='slider_container'>
-        {modalList === 'madalUptown' && <ModalUptown setModalList={setModalList}/>}
-        {modalList === 'madlPortfolio' && <ModalPortfolio setModalList={setModalList}/>}
+        <section className='slider_container' ref={divRef}>
+        {modalList === 'modalUptown' && <ModalUptown divRef={divRef} setModalList={setModalList}/>}
+        {modalList === 'modlPortfolio' && <ModalPortfolio divRef={divRef} setModalList={setModalList}/>}
+        {modalList === 'modlBooklog' && <ModalBooklog divRef={divRef} setModalList={setModalList}/>}
+        {modalList === 'modalYoutube' && <ModalYoutube divRef={divRef} setModalList={setModalList}/>}
+        {modalList === 'modalBookflix' && <ModalBookflix divRef={divRef} setModalList={setModalList}/>}
         <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide number-slide1">
                 <div className='img_container'>
@@ -159,7 +191,7 @@ import ModalPortfolio from '../modal/modalPortfolio'
                     <div className="slide_card_buttons">
                         <button 
                             className='slide_card_contents_button_readme'
-                            onClick={showModalUptown}
+                            onClick={showModalBooklog}
                         >자세히보기 ▶ README</button>
                         <div className='slide_card_buttons_innerContainer'>
                             <button className='slide_card_contents_button_Github'
@@ -191,7 +223,7 @@ import ModalPortfolio from '../modal/modalPortfolio'
                     <div className="slide_card_buttons">
                         <button 
                             className='slide_card_contents_button_readme'
-                            onClick={showModalUptown}
+                            onClick={showModalYoubube}
                         >자세히보기 ▶ README</button>
                         <div className='slide_card_buttons_innerContainer'>
                             <button className='slide_card_contents_button_Github'
@@ -223,7 +255,7 @@ import ModalPortfolio from '../modal/modalPortfolio'
                     <div className="slide_card_buttons">
                         <button 
                             className='slide_card_contents_button_readme'
-                            onClick={showModalUptown}
+                            onClick={showModalBookFlix}
                         >자세히보기 ▶ README</button>
                         <div className='slide_card_buttons_innerContainer'>
                             <button className='slide_card_contents_button_Github'
@@ -239,19 +271,19 @@ import ModalPortfolio from '../modal/modalPortfolio'
 
         <div ref={thumbnailRef} className="keen-slider thumbnail">
             <div className="keen-slider__slide number-slide1">
-                <img src={example} alt="" />
+                <img src={uptown} alt="" />
             </div>
             <div className="keen-slider__slide number-slide2">
-                <img src={bookflix} alt="" />
+                <img src={portfilio} alt="" />
             </div>
             <div className="keen-slider__slide number-slide3">
-                <img src={example} alt="" />
+                <img src={booklog} alt="" />
             </div>
             <div className="keen-slider__slide number-slide4">
-                <img src={bookflix} alt="" />
+                <img src={youtube} alt="" />
             </div>
             <div className="keen-slider__slide number-slide5">
-                <img src={example} alt="" />
+                <img src={bookflix} alt="" />
             </div>
         </div>
         </section>

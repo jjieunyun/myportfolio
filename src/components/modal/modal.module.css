@@ -51,6 +51,7 @@
 
 
 .content_title {
+    font-family: 'Paytone One', sans-serif;;
     font-size: 2rem;
     margin-bottom: 0.8rem;
 }
@@ -60,12 +61,13 @@
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50vw;
+    width: 45vw;
     height: 50vh;
     background-color: #fcfcfc;
     z-index: 1000;
     padding: 50px 50px;
     overflow-y: scroll;
+    word-break: keep-all;
 }
 
 /*각 컨텐츠 내용*/

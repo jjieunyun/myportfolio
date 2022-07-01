@@ -1,12 +1,25 @@
 import React from 'react';
+import { useEffect } from 'react';
 import styles from './modal.module.css'
 
-const ModalUptown = ({setModalList}) => {
+const ModalUptown = ({setModalList, divRef}) => {
 
     const onclickClose = () => {
         setModalList(null)
         document.body.style.overflowY = "scroll";
     }
+
+
+         //🍎다른곳 클릭하면 메뉴창 없어짐
+        const clickEvent = ()=> {
+            setModalList(null)
+            document.body.style.overflowY = "scroll";
+        }
+    
+    
+        useEffect(()=>{
+            divRef.current !==undefined && divRef.current.addEventListener('click', clickEvent);
+        })
 
     return (
         <article>
@@ -54,12 +67,12 @@ const ModalUptown = ({setModalList}) => {
 
                     <div className={styles.content_box}>
                         <h2>⚒️Technology Stacks</h2>
-                        <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"/>
-                        <img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=white"/>
-                        <img src="https://img.shields.io/badge/ReactRouter-CA4245?style=for-the-badge&logo=ReactRouter&logoColor=white"/>
-                        <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white"/>
-                        <img src="https://img.shields.io/badge/Cloudinary-2C39BD?style=for-the-badge&logo=Cloudways&logoColor=white"/>
-                        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>
+                        <img alt="badge" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"/>
+                        <img alt="badge" src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=white"/>
+                        <img alt="badge" src="https://img.shields.io/badge/ReactRouter-CA4245?style=for-the-badge&logo=ReactRouter&logoColor=white"/>
+                        <img alt="badge" src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white"/>
+                        <img alt="badge" src="https://img.shields.io/badge/Cloudinary-2C39BD?style=for-the-badge&logo=Cloudways&logoColor=white"/>
+                        <img alt="badge" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>
                     </div>
                     
             </div>
