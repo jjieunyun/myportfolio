@@ -2,15 +2,15 @@
 @value titleSize, Radius from '../../common/size.module.css';
 @value makerWhite,makerLightGrey,makerBrown,makerMint,makerOrange,makerGreen,makerpink,makerBlue  from '../../common/colors.module.css';
 
-.slider_container{
-    margin: 0;
-    width: 90rem;
-    height: 35rem;
-    max-width: 100%;
-    margin: auto;
+.slider_container {
+  margin: 0;
+  width: 90rem;
+  height: 35rem;
+  max-width: 100%;
+  margin: auto;
 }
-    
-    /* [class^="number-slide"],
+
+/* [class^="number-slide"],
     [class*=" number-slide"] {
         border: 1px solid red;
         background-color: antiquewhite;
@@ -19,158 +19,148 @@
         height: 25rem;
     } */
 
-.keen-slider__slide{
-    display: flex;
-    height: 27rem;
+.keen-slider__slide {
+  display: flex;
+  height: 27rem;
 }
-
 
 /*큰 슬라이더 안에있는 이미지*/
 .img_container {
-    width: 50%;
-    border-radius: 10px;
-    height: 100%;
-    opacity: 1;
-    
+  width: 50%;
+  border-radius: 10px;
+  height: 100%;
+  opacity: 1;
 }
 
-
-
-.keen-slider__slide> .img_container > .mainIMG {
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.3s ease-in;
+.keen-slider__slide > .img_container > .mainIMG {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease-in;
 }
-
-
-
-/* .keen-slider__slide > .img_container> .mainIMG:hover {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    z-index: 20;
-} */
-
 
 /*slide_card*/
-.keen-slider__slide > .slide_card{
-    position: relative;
-    margin-left: 2%;
-    width: 48%;
-    height: 100%;
-    margin-right: 0;
-    border: 2px solid #594f4f;
-    background-color: white;
-    border-radius: 20px;
-    color: #594f4f;
+.keen-slider__slide > .slide_card {
+  position: relative;
+  margin-left: 2%;
+  width: 48%;
+  height: 100%;
+  margin-right: 0;
+  border: 2px solid #594f4f;
+  background-color: white;
+  border-radius: 20px;
+  color: #594f4f;
 }
 
 /*slide__bar의 container*/
-.keen-slider__slide > .slide_card >.slide__bar {
-    border-bottom: 2px solid #594f4f;
-    width: auto;
-    height: 2rem;
-    display: flex;
-    flex-direction: row;
+.keen-slider__slide > .slide_card > .slide__bar {
+  border-bottom: 2px solid #594f4f;
+  width: auto;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
 }
 
 /*slide__bar의 안에 dots*/
-.keen-slider__slide > .slide_card >.slide__bar > div{
-    margin: auto;
-    margin-left: 10px;
-    margin-right: 0;
-    text-align: center;
-    width: 15px;
-    height: 15px;
-    background-color: #594f4f;
-    border: 1px solid c;
-    border-radius: 50%;
+.keen-slider__slide > .slide_card > .slide__bar > div {
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 0;
+  text-align: center;
+  width: 15px;
+  height: 15px;
+  background-color: #594f4f;
+  border: 1px solid c;
+  border-radius: 50%;
+}
+
+.slide_card_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide_card_buttons > button{
+    cursor: pointer;
+    border: none;
+}
+
+.slide_card_contents_button_readme {
+    position: absolute;
+    top: 73%;
+    background-color: black;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+.slide_card_buttons_innerContainer {
+    position: absolute;
+    top: 87%;
+}
+
+.slide_card_contents_button_Github,.slide_card_contents_button_ViewDemo {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0 2rem;
+    color: #594f4f;
+    transition: all 0.2s ease-in-out;
+}
+
+.slide_card_contents_button_Github:hover,.slide_card_contents_button_ViewDemo:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
 }
 
 
-    .number-slide1 img{
-        height: auto;
-    }
-    
-    .number-slide1 {
-        
-    }
-    
-    .number-slide2 {
-        
-    }
-    
-    .number-slide3 {
-        
-    }
-    
-    .number-slide4 {
-        
-    }
-    
-    .number-slide5 {
-        
-    }
-    
+/*큰 슬라이드 안에있는 이미지*/
+
+.number-slide1 img {
+  height: auto;
+}
+
+.number-slide1 {
+}
+
+.number-slide2 {
+}
+
+.number-slide3 {
+}
+
+.number-slide4 {
+}
+
+.number-slide5 {
+}
+
+.slide_card_title {
+  font-size: 2rem;
+  font-weight: 800;
+}
 
 /*썸네일*/
-    .thumbnail {
- 
-    }
-    
-    .thumbnail .keen-slider__slide {
-        margin-top: 1.5rem;
-        width: 17.5rem;
-        height: 9rem;
-        cursor: pointer;
-        background-color: rgb(90, 89, 89);
-    }
+.thumbnail {
+}
 
-    .thumbnail .keen-slider__slide > img {
-        width: 17.5rem;
-        height: 9rem;
-        opacity: 0.2;
-        transition: opacity 0.3s ease-in;
-    }
+.thumbnail .keen-slider__slide {
+  margin-top: 1.5rem;
+  width: 17.5rem;
+  height: 9rem;
+  cursor: pointer;
+  background-color: rgb(90, 89, 89);
+}
 
-    .thumbnail > .keen-slider__slide.active > img{
-        /* border: 2px solid black; */
-        opacity: 1;
-    }
-    
+.thumbnail .keen-slider__slide > img {
+  width: 17.5rem;
+  height: 9rem;
+  opacity: 0.2;
+  transition: opacity 0.3s ease-in;
+}
 
-/*custom card*/
-
-/* .slide_card {
-        position: relative;
-        max-width: 40%;
-        width: 40%;
-        height: 300px;
-        margin: auto;
-        margin-top: 3rem;
-        border: 2px solid makerBrown;
-        background-color: makerWhite;
-        border-radius: 20px;
-        color: makerBrown;
-    }
-    
-    .slide__bar {
-        border-bottom: 2px solid makerBrown;
-        width: auto;
-        height: 2rem;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .slide__bar >  div {
-        margin: auto;
-        margin-left: 10px;
-        margin-right: 0;
-        text-align: center;
-        width: 15px;
-        height: 15px;
-        background-color: makerBrown;
-        border: 1px solid makerBrown;
-        border-radius: 50%;
-    } */
+.thumbnail > .keen-slider__slide.active > img {
+  /* border: 2px solid black; */
+  opacity: 1;
+}

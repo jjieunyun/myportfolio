@@ -67,7 +67,7 @@ ul {
 
 .skillset_title {
     text-align: center;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
     font-size: 1.5rem;
     font-family: fontLogo;
 }
@@ -183,8 +183,13 @@ ul {
     transition: all 0.3s ease-in-out;
 }
 
-.details {
-    text-align: center;
+/*아이콘설명*/
+
+.etc {
+    margin: auto;
+    width: 90%;
+    line-height: 1.8rem;
+    
 }
 
 .details_none_box {
@@ -199,23 +204,30 @@ ul {
     justify-content: center;
     color: rgba(0, 30, 128, 0.53);
     font-size: 4rem;
+    filter: drop-shadow(3px 5px 2px rgba(47, 47, 47, 0.766));
 }
 
 .details_pointer {
     position: absolute;
-    left: 54%;
+    top: -12%;
+    left: 53%;
     font-size: 3rem;
-    color: rgb(227, 225, 225);
+    color: rgb(239, 237, 237);
     filter: drop-shadow(3px 5px 2px rgba(47, 47, 47, 0.766));
-    /* background-color:rgb(255, 0, 191);*/
-    animation: alternate infinite click 0.3s;
+    animation: alternate infinite click 0.4s;
 } 
+
+.details {
+    word-break:keep-all;
+}
 
 @keyframes click {
     0% {
         top: 20%;
+        left: 54.5%;
     }
     100% {
         top: 18%;
+        left: 54%;
     }
 }

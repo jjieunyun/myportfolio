@@ -240,14 +240,14 @@ const hoverFirebase = () => {
                                     details === null ? (
                                         <div className={styles.details_none_box}>
                                             <p className={styles.details_question}><i className="fa-solid fa-circle-question"></i></p>
-                                            <p className={styles.details_pointer}><i className="fa-solid fa-arrow-pointer"></i></p>
+                                            <span className={styles.details_pointer}><i className="fa-solid fa-arrow-pointer"></i></span>
                                         </div>
                                     ) 
                                     : (
                                     details.map((item,index) => {
-                                        return <p className={styles.details}  key={index}>{item}</p>
-                                    }))
-                                }
+                                        return <li className={styles.details}  key={index}>{item}</li>
+                                    })
+                                    )}
                             </div>
                         </div>
                     </div>

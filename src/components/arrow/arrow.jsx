@@ -25,7 +25,7 @@ const Arrow = ({homeHeight, clickHome}) => {
             style={{opacity : `${style.opacity}`, pointerEvents : `${style.pointerEvents}`}}
             onClick={()=>clickHome()}
             >
-                <i className="fa-solid fa-arrow-up"></i>
+                <span><i className="fa-solid fa-arrow-up"></i></span>
         </div>
     );
 };
