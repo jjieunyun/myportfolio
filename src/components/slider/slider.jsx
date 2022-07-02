@@ -30,7 +30,7 @@ import { useRef } from 'react'
         initial: 0,
         slides: {
             perView: 5,
-            spacing:20,
+            spacing: 30,
         },
         },
         [ThumbnailPlugin(instanceRef)]

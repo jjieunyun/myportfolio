@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-import Mouse from '../mouse';
 import styles from './contact.module.css';
 
 import background_paper from '../../imgs/background_paper.png'
@@ -13,21 +12,28 @@ const Contact = forwardRef((props,ref) => {
             <img className={styles.avatar} src={avatar} alt="" />
             <h1 className={styles.title}>Contact</h1>
             <div className={styles.container}>
-                <p>지금까지 제 포트폴리오를 읽어주셔서 감사합니다. </p>
-                <p>아래는 공부하는 내용을 꾸준히 기록하고 있는 저의 GitHub와 Notion링크 입니다😊</p>
         
                 <div className={styles.Profilecard}>
                     <p className={styles.name}>Yun jieun</p>
                     <img className={styles.qr} src={qr} alt="" />
-                    <div className={styles.icon_container}>
-                        <a className={styles.icon} href='https://github.com/'>
-                            <i className="fa-solid fa-envelope"></i>
-                        </a>
+                    <div className={styles.content_container}>
+                        <p className={styles.email_title}>E-mail</p>
+                        <p>jjieunyun@naver.com</p>
                     </div>
+
                     <div className={styles.icon_container}>
-                        <a className={styles.icon} href='https://github.com/'>
-                            <i className="fa-solid fa-phone"></i>
-                        </a>
+                        <div className={styles.icon_box}>
+                        <p className={styles.icon_title}>Github</p>
+                            <a target="_blank" rel="noopener noreferrer" className={styles.icon} href='https://github.com/'>
+                                <i className="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                        <div className={styles.box}>
+                        <p className={styles.icon_title}>Notion</p>
+                            <a target="_blank" rel="noopener noreferrer" className={styles.icon} href='https://forested-verbena-e9a.notion.site/JJIEUN-Develop-Note-f7b237fb5508431080a0c251b63549be'>
+                                <i class="fa-solid fa-cube"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

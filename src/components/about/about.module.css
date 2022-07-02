@@ -7,13 +7,9 @@
     max-width: 100%;
     height: 140vh;
     max-height: fit-content;
-    /* background-color: makerOrange; */
     padding-bottom: 3rem;
     margin-top: 0;
-    /* background-image: url('../../imgs/backgound_dot1.png');
-    background-size: cover;
-    background-position: 0px -1px;
-    background-repeat: no-repeat; */
+
 }
 
 .background {
@@ -79,7 +75,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: rgb(54, 44, 42) 0px 20px 30px -10px;
+    /* box-shadow: rgb(54, 44, 42) 0px 20px 30px -10px; */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
@@ -122,8 +119,8 @@
 
 .point {
     font-family: fontLogo;
-    font-size: 1.5rem;
-    text-shadow: makerMint 1px 1px 0px, #9C9C9C 2px 2px 0px;
+    font-size: 1.7rem;
+    text-shadow: makerOrange 1px 1px 0px, #bebbaf 2px 2px 0px;
 }
 
 .line {
