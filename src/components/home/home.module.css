@@ -3,20 +3,21 @@
 
 .home {
     width: 100vw;
-    height: 110vh;
+    height: 100vh;
 }
 
 .div_container {
     width: 100%;
     height: 100vh;
+
 }
 
 .background {
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 30%;
     width: 70%;
-    height: 120vh;
+    height: 100vh;
     z-index: -100;
     object-fit: cover;
 }

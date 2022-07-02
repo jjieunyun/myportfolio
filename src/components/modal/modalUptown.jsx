@@ -40,7 +40,7 @@ const ModalUptown = ({setModalList, divRef}) => {
                         <h2>📌Summary</h2>
                     <p>
                     훈련기관에서 팀으로 진행한 프로젝트입니다.(총 3명) 
-                    업사이클링(Upcycling)을 주제로 선정하여 공통의 관심사를 가진 사람들이 자신의 이야기를 공유할 수있는 커뮤니티 서비스를 만들었습니다.
+                    업사이클링(Upcycling)을 주제로 선정하여 공통의 관심사를 가진 사람들이 자신의 이야기를 공유할 수있는 커뮤니티 공간을 만들었습니다.
                     <br/><br/>
 
                     <li><span className={styles.point}>Home </span>페이지에는 신규로 작성된 글을 슬라이더로 보여주었습니다. </li>

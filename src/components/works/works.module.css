@@ -4,11 +4,19 @@
 
 .work {
     position: relative;
-    background-color: makerpink;
     color: makerBrown;
     text-align: center;
     height: 110vh;
     margin: auto;
+}
+
+.background {
+    position: absolute;
+    left: 0;
+    z-index: -200;
+    width: 103vw;
+    height: 110vh;
+    object-fit: cover;
 }
 
 

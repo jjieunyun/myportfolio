@@ -1,9 +1,11 @@
 import React, { forwardRef } from 'react';
 import styles from './about.module.css'
+import backgound_dot1 from '../../imgs/backgound_dot1.png'
 
 const About = forwardRef((props,ref) => {
     return (
         <section ref={ref} className={styles.about}>
+            <img className={styles.background} src={backgound_dot1} alt="" />
         <div className={styles.history}>
             <div className={styles.history_box}>
                 <h1>About Me</h1>

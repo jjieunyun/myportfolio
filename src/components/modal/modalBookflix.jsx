@@ -39,7 +39,7 @@ const ModalBookflix = ({setModalList, divRef}) => {
                     <p>
                     Vue.js 프레임워크를 통해서 제작했습니다. <br/><br/>
                     데이터를 Vuex에 저장하고 VueRouter 활용하여 제작했습니다.<br/>
-                    당시 Api, Firebase 등을 학습하기 이전이라 동적인 기능은 거의 구현하지 못했지만,<br/>
+                    당시 Api, Firebase 등을 학습하기 이전이라 많은 기능을 구현하진 못했지만,,<br/>
                     추후에 Firebase로 로그인기능을 추가하고 웹 API를 사용해 개선할예정입니다.
 
                     <li><span className={styles.point}>Home </span>Vuex에 저장된 데이터를 받아와 슬라이더로 보여줍니다.</li>

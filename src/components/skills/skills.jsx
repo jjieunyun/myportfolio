@@ -4,6 +4,8 @@ import { useCallback } from 'react';
 import { useRef } from 'react';
 import styles from './skills.module.css'
 
+import backgound_dot2 from '../../imgs/backgound_dot2.png'
+
 import bootstrap from '../../imgs/stack/bootstrap.svg'
 import css from '../../imgs/stack/css-3.svg'
 import express from '../../imgs/stack/express.svg'
@@ -131,6 +133,7 @@ const hoverFirebase = () => {
 
     return (
         <section ref={ref} className={styles.skills}>
+            <img className={styles.background} src={backgound_dot2} alt="" />
             <div className={styles.container}>
             <h1>Skills & Attributes</h1>
                 <div ref={skillsRef} className={styles.skillset}>

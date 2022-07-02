@@ -121,7 +121,7 @@ import { useRef } from 'react'
                     <p className='slide_card_contents'>
                     훈련기관에서 팀으로 진행한 프로젝트입니다(총 3명) <br/>
                     React, Redux, Firebase를 활용해 제작했습니다. <br/><br/>
-                    업사이클링(Upcycling)을 주제로 선정하여 공통의 관심사를 가진 사람들이 <br/>자신의 이야기를 공유할 수있는 커뮤니티 서비스를 만들었습니다.</p>
+                    업사이클링(Upcycling)을 주제로 선정하여 공통의 관심사를 가진 사람들이 <br/>자신의 이야기를 공유할 수있는 커뮤니티 공간을 만들었습니다.</p>
                     <div className="slide_card_buttons">
                         <button 
                             className='slide_card_contents_button_readme'
@@ -249,7 +249,7 @@ import { useRef } from 'react'
                     <div className='slide_card_contents'>
                         Vue.js 프레임워크를 통해서 제작했습니다. <br/><br/>
                         데이터를 Vuex에 저장하고 VueRouter 활용하여 제작했습니다.<br/>
-                        당시 Api, Firebase 등을 학습하기 이전이라 동적인 기능은 거의 구현하지 못했지만,<br/>
+                        당시 Api, Firebase 등을 학습하기 이전이라 많은 기능을 구현하진 못했지만,<br/>
                         추후에 Firebase로 로그인기능을 추가하고 웹 API를 사용해 개선할예정입니다.
                     </div>
                     <div className="slide_card_buttons">
