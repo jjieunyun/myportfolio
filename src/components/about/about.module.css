@@ -147,6 +147,8 @@
     max-width: 90%;
     margin: auto;
     margin-top: 14rem;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
 }
 
 /*박스 테두리 css*/

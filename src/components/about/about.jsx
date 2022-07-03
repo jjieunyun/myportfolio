@@ -1,8 +1,33 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect } from 'react';
 import styles from './about.module.css'
 import backgound_dot1 from '../../imgs/backgound_dot1.png'
+import { useRef } from 'react';
+import { useCallback } from 'react';
 
 const About = forwardRef((props,ref) => {
+
+    const divRef = useRef();
+
+const handleScroll = useCallback(([entry]) => {
+    const { current } = divRef;
+        if(entry.isIntersecting) {
+            current.style.opacity = 1;
+            console.dir(current)
+    }
+}, []);
+
+useEffect(() => {
+    let observer;
+    const { current } = divRef;
+    
+    if (current) {
+    observer = new IntersectionObserver(handleScroll, { threshold: 0.5});
+    observer.observe(current);
+    return () => observer && observer.disconnect();
+    };
+}, [handleScroll]);
+
+
     return (
         <section ref={ref} className={styles.about}>
             <img className={styles.background} src={backgound_dot1} alt="" />
@@ -41,7 +66,7 @@ const About = forwardRef((props,ref) => {
                         </div>
                 </div>
             </div>
-            <div className={styles.history_box2}>
+            <div ref={divRef} className={styles.history_box2}>
             <div className={styles.social}>
                     <div className={styles.bar}>
                         <div></div><div></div><div></div>

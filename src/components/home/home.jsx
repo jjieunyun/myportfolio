@@ -6,7 +6,7 @@ import confetti from 'canvas-confetti';
 import { useCallback } from 'react';
 import { useReward } from 'react-rewards';
 
-import home_me from '../../imgs/home-4cut.png'
+import home_me from '../../imgs/home_me_colored.png'
 
 
 const Home = forwardRef((props,ref) => {
@@ -49,7 +49,7 @@ const Home = forwardRef((props,ref) => {
         });
     }, []);
 
-    // 도전부분에 사진넣기!!
+    // 
 
 
     return (
@@ -65,6 +65,7 @@ const Home = forwardRef((props,ref) => {
                 <div className={styles.home_cut_container} style={style}>
                     <p className={styles.first_letter}>Forwarder</p>
                     <img className={styles.home_cut} src={home_me} alt="" />
+                    <div className={styles.home_cut_background}></div>
                     <p className={styles.second_letter}>Casino Dealer</p>
                 </div>
                 <div className={styles.contents}>

@@ -78,6 +78,14 @@
     animation:line_move 0.8s ease-in-out Infinite Alternate;
     -webkit-box-shadow: -10px 0px 13px -7px makerBrown, 10px 0px 13px -7px makerBrown, 5px 5px 15px 5px rgba(0,0,0,0); 
     box-shadow: -10px 0px 13px -7px makerBrown, 10px 0px 13px -7px makerBrown, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.home_cut_background {
+    position: absolute;
+    height: 9.7rem;
+    width: 20.5rem;
+    background-color: makerBrown;
+    animation:line_move 0.8s ease-in-out Infinite Alternate;
     
 }
 
@@ -184,18 +192,16 @@
     }
     100% {
         top: -40px;
-        transform: scale(1.05);
     }
 }
 
 @keyframes scale-2 {
     0% {
-        top:82px;
+        top:84px;
     }
     100% {
         top:76px;
         text-shadow: #302f2f 1px 1px 0;
-        transform: scale(1.05);
     }
 }
 
