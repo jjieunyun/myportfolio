@@ -67,31 +67,33 @@ const Home = forwardRef((props,ref) => {
                     <img className={styles.home_cut} src={home_me} alt="" />
                     <p className={styles.second_letter}>Casino Dealer</p>
                 </div>
-                    <div className={styles.left1}>
-                        <div style={{position: 'relative', left : '3.5rem'}} className={styles.point} onMouseOver={()=>changeStyle()} onMouseLeave={()=>closeStyle()} id="emojiReward" >Challenge :</div>
-                        <h3>눈앞의 도전을 두려워하지 않고,</h3>
-                    </div>
-                    <div className={styles.right}>
-                        <div className={styles.point2}  id="balloonsReward" onMouseEnter={() => { balloonsReward();}} >Consistency :</div>
-                        <h3>뚝심있게 성장하겠습니다.</h3>
-                    </div>
-                    <div className={styles.left2}>
+                <div className={styles.contents}>
+                    <div className={styles.contents_box}>
                         <div 
-                            className={styles.point3} 
-                            onMouseEnter={onHover}
-                            style={{position: 'relative', left : '-1rem'}}
-                        >Cooperation +</div>
-                        <h3>함께 할때 더욱 빛나는</h3>
-                        <h3 className={styles.mini_letter}>프론트엔드 개발자가 되겠습니다.</h3>
+                        className={styles.point} 
+                        onMouseOver={()=>changeStyle()} 
+                        onMouseLeave={()=>closeStyle()} 
+                        >Challenge</div>
+                        <p className={styles.text}>도전을 두려워하지 않고,</p>
                     </div>
-                    
-                    {/* <button onClick={clickContact} className={styles.button}>Contact Me</button> */}
+                    <div className={styles.contents_box}>
+                        <div 
+                            className={styles.point} 
+                            onMouseEnter={() => { balloonsReward();}}
+                            id="balloonsReward" 
+                        >Cooperation
+                        </div>
+                        <p className={styles.text}>함께 일하고싶은 개발자가 되기위해</p>
+                    </div>
+                    <div className={styles.contents_box}>
+                        <div 
+                        className={styles.point}  
+                        onMouseEnter={onHover}
+                        >Consistency</div>
+                        <p className={styles.text}>오늘도 성장하겠습니다.</p>
+                    </div>
                 </div>
-                            {/* disabled={isConfettiAnimating || isBalloonsAnimating}
-                            onClick={() => {
-                                confettiReward();
-                                balloonsReward();
-                            }}> */}
+                </div>
             </div>
         </section>
     );

@@ -14,7 +14,7 @@
 
 .background {
     position: absolute;
-    top: 2px;
+    top: 0px;
     left: 30%;
     width: 70%;
     height: 100vh;
@@ -107,69 +107,66 @@
     animation:scale-2 0.8s ease-in-out Infinite Alternate;
 }
 
-.right {
-    position:relative;
-    right: -35%;
-    margin: 4.5rem;
-}
 
-.right > h3 {
+/*오른쪽 contents영역*/
+.contents {
     position: relative;
-    right: 5%;
+    top: -10%;
+    left: -10%;
+    display: flex;
+    flex-direction: column;
+    height: 35rem;
+    justify-content: space-around;
+    width: 50rem;
 }
 
-.point, .point2, .point3  {
-    font-size: 2.7rem;
-    width: 20rem;
+
+.contents_box {
+    height: 8rem;
+    width: 100%;
+}
+
+.contents_box:nth-child(2n) {
+    text-align: end;
+}
+
+.contents_box:nth-child(2n) > div {
+    right: 30px;
+}
+
+.contents_box:nth-child(2n) > p {
+    position: relative;
+    right: 0%;
+}
+
+
+.point  {
+    width: 60%;
+    position: absolute;
+    font-size: 4rem;
     font-family: fontMenu;
-    color: makerBrown;
+    color: transparent;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    text-shadow: makerMint 2px 2px 0px, #9C9C9C 4px 4px 0px;
     animation: alternate point ease-in-out infinite 1s;
+    -webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: makerWhite;
+    text-shadow:  #d7f2e776 2px 2px 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+.text {
+    position: relative;
+    top: 1rem;
+    font-size: 2.5rem;
+    font-family: 'NanumSquareExtraBold';
 }
 
 .point:hover {
-    font-size: 2.7rem;
-    font-family: fontMenu;
-    color: makerOrange;
-    text-shadow: makerBrown 2px 2px 0px, #9C9C9C 4px 4px 0px;
+    text-shadow:  makerOrange 2px 2px 4px;
 }
-
-.point2:hover {
-    font-size: 2.7rem;
-    font-family: fontMenu;
-    color: makerGreen;
-    text-shadow: makerBrown 2px 2px 0px, #9C9C9C 4px 4px 0px;
-}
-
-.point3:hover {
-    font-size: 2.7rem;
-    font-family: fontMenu;
-    color: makerBlue;
-    text-shadow: makerBrown 2px 2px 0px, #9C9C9C 4px 4px 0px;
-}
-
-.mini_letter {
-    position: relative;
-    left: -3rem;
-}
-
-
-
-
-
-.button {
-    background-color: transparent;
-    cursor: pointer;
-    border: 2px solid makerOrange;
-    color: makerOrange;
-    outline: none;
-}
-
-
-
-/**/
 
 
 @keyframes line_move {
