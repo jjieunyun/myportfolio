@@ -11,11 +11,11 @@ import youtube from '../../imgs/youtube.png'
 import portfilio from '../../imgs/port.png'
 
 
-import gifUptown from '../../imgs/gif_uptown.gif'
-import gifPortfolio from '../../imgs/gif_portfolio.gif'
-import gifBooklog from '../../imgs/gif_booklog.gif'
-import gifYoutube from '../../imgs/gif_youtube.gif'
-import gifBookflix from '../../imgs/gif_bookflix.gif'
+import gifUptown from '../../imgs/gif_uptown-min.gif'
+import gifPortfolio from '../../imgs/gif_portfolio-min.gif'
+import gifBooklog from '../../imgs/gif_booklog-min.gif'
+import gifYoutube from '../../imgs/gif_youtube-min.gif'
+import gifBookflix from '../../imgs/gif_bookflix-min.gif'
 
 
 import ModalUptown from '../modal/modalUptown'
