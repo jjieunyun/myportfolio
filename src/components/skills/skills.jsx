@@ -37,7 +37,6 @@ const Skills = forwardRef((props,ref) => {
     const [details, setDetails] = useState(null)
 
 const handleScroll = useCallback(([entry]) => {
-        const { current } = skillsRef;
         if(entry.isIntersecting) {
         setBarStyles({visibility: 'visible', })
     }

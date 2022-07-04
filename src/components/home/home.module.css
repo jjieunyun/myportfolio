@@ -168,8 +168,9 @@
 .text {
     position: relative;
     top: 1rem;
-    font-size: 2.5rem;
-    font-family: 'NanumSquareExtraBold';
+    font-size:2.7rem;
+    font-family: 'Poor Story', cursive;
+    font-weight: bolder;
 }
 
 .point:hover {

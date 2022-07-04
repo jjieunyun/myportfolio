@@ -11,11 +11,11 @@ import youtube from '../../imgs/youtube.png'
 import portfilio from '../../imgs/port.png'
 
 
-import gifUptown from '../../imgs/gif_uptown-min.gif'
-import gifPortfolio from '../../imgs/gif_portfolio-min.gif'
-import gifBooklog from '../../imgs/gif_booklog-min.gif'
-import gifYoutube from '../../imgs/gif_youtube-min.gif'
-import gifBookflix from '../../imgs/gif_bookflix-min.gif'
+import gifUptown from '../../imgs/gifUptown_cut.gif'
+import gifPortfolio from '../../imgs/gifPortfolio_cut.gif'
+import gifBooklog from '../../imgs/gifBooklog_cut.gif'
+import gifYoutube from '../../imgs/gifYoutube_cut.gif'
+import gifBookflix from '../../imgs/gifBookflix_cut.gif'
 
 
 import ModalUptown from '../modal/modalUptown'
@@ -33,9 +33,7 @@ import { useRef } from 'react'
     const [startGif, setStartGif] = useState(gifUptown);
 
     const startView = (title)=> {
-        setStartGif(null)
         setStartGif(title)
-
     }
 
 
