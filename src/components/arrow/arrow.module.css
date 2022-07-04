@@ -3,6 +3,7 @@
 @value makerWhite,makerBrown,makerMint,makerOrange,makerGreen,makerpink,makerBlue  from '../../common/colors.module.css';
 
 .arrowUp {
+    z-index: 5;
     position: fixed;
     bottom: 50px;
     width: 3.2rem;

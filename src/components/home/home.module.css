@@ -139,12 +139,12 @@
 }
 
 .contents_box:nth-child(2n) > div {
-    right: 30px;
+    right: 200px;
 }
 
 .contents_box:nth-child(2n) > p {
     position: relative;
-    right: 0%;
+    right: 15%;
 }
 
 

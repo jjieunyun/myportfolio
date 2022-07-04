@@ -147,8 +147,10 @@
     max-width: 90%;
     margin: auto;
     margin-top: 14rem;
-    opacity: 0;
     transition: all 0.4s ease-in-out;
+
+    opacity: 0;
+    transform: translate3d(0, 20%, 0)translate3d(0, 20%, 0)
 }
 
 /*박스 테두리 css*/

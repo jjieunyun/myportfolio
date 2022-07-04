@@ -4,7 +4,6 @@ import About from './components/about/about';
 import Arrow from './components/arrow/arrow';
 import Contact from './components/contact/contact';
 import Home from './components/home//home';
-import Mouse from './components/mouse';
 import Navbar from './components/navbar/navbar';
 import Skills from './components/skills/skills';
 import Works from './components/works/works';

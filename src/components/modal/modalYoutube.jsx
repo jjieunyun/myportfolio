@@ -32,16 +32,16 @@ const ModalYoutube = ({setModalList, divRef}) => {
                 >X</button>
             </div>
                 <div className={styles.line}>
-                    <h1 className={styles.content_title}>Youtube CloneCoding</h1>
+                    <h1 className={styles.content_title}>Youtube Clone Coding</h1>
                 </div>
                     <h3>Youtube API를 활용해 실시간 영상 스트리밍이 가능한 페이지</h3>
                     <div className={styles.content_box}>
                         <h2>📌Summary</h2>
                     <p>
                     React를 활용한 첫번째 개인프로젝트입니다. <br/><br/>
-                        이전에 CSS와 JS로 간단하게 페이지를 만든 경험을 토대로 <br/>
-                        Youtube API를 Axios를 활용해 사이트를 개선했습니다.<br/>
-                        검색기능을 구현하여 자신이 원하는 영상을 시청할 수있습니다.
+                    이전에 CSS와 JS로 간단하게 페이지를 만든 경험을 토대로 <br/>
+                    Youtube API를 Axios를 활용해 사이트를 개선했습니다.<br/>
+                    검색기능을 구현하여 자신이 원하는 영상을 시청할 수있습니다.
                     <br/><br/>
 
                     <li><span className={styles.point}>Home </span>Youtube에서 제공하는 인기영상을 볼 수있습니다.</li>

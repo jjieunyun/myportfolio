@@ -8,24 +8,28 @@ const About = forwardRef((props,ref) => {
 
     const divRef = useRef();
 
-const handleScroll = useCallback(([entry]) => {
+    const handleScroll = useCallback(([entry]) => {
     const { current } = divRef;
         if(entry.isIntersecting) {
+            current.style.transitionProperty = 'opacity transform';
+            current.style.transitionDuration = '1s';
+            current.style.transitionTimingFunction = 'cubic-bezier(0, 0, 0.2, 1)';
+            current.style.transitionDelay = '0s';
             current.style.opacity = 1;
-            console.dir(current)
-    }
-}, []);
+            current.style.transform = 'translate3d(0, 0, 0)';
+        }
+    }, []);
 
-useEffect(() => {
-    let observer;
-    const { current } = divRef;
-    
-    if (current) {
-    observer = new IntersectionObserver(handleScroll, { threshold: 0.5});
-    observer.observe(current);
-    return () => observer && observer.disconnect();
-    };
-}, [handleScroll]);
+    useEffect(() => {
+        let observer;
+        const { current } = divRef;
+        
+        if (current) {
+        observer = new IntersectionObserver(handleScroll, { threshold: 0.05});
+        observer.observe(current);
+        return () => observer && observer.disconnect();
+        };
+    }, [handleScroll]);
 
 
     return (
@@ -48,20 +52,21 @@ useEffect(() => {
                         <span className={styles.point}>Challenge   </span ><span className={styles.line}></span>
                         <h3>30대, Frontend 개발자에 도전하다!</h3>
                         <p>결코 적지않은 나이에 '세번째' 직업에 도전하게 되었습니다.<br/>
-                            지난 날의 저는.. 남들 처럼 대학에 진학했고, 남들이 하는 것 처럼 취업에 성공해  카지노딜러로 살아가던 도중,
-                            문득 돌이켜 보니... <br/>저는 무엇인가를 만드는 것을 좋아하고, 몰두하는 것을 좋아하고,
+                            지난 날의 저는.. 남들 처럼 대학에 진학하고 남들 처럼 직장을 다니며 살아가던 도중,<br/>
+                            문득 제 자신을 돌이켜 보니... <br/>저는 무엇인가를 만드는 것을 좋아하고, 몰두하는 것을 좋아하고,
                             새로운것을 배우는것에 아주 흥미를 느끼는 사람이었습니다.<br/>
-                            세번째 기회인 만큼 좀 더 신중하고 간절한 마음으로 Front-end개발자의 첫걸음을 시작하게 되었습니다.<br/>
-                            오늘도 일을할때 행복을 느끼고 성장 하는 Front-end개발자가 되겠습니다. <br/>감사합니다.
+                            세번째 기회인 만큼 좀 더 신중하고 간절한 마음으로 Front-end개발자로서 첫걸음을 시작하게 되었습니다.<br/><br/>
+                            일할 때 행복을 느끼고 오늘도 성장 할 수있는 Front-end개발자가 되겠습니다. <br/>감사합니다.
                         </p>
                         <div className={styles.intro_box2}>
                             <span className={styles.point}>Consistency </span> <span className={styles.line}></span>
                             <h3>consistency 제목 정하기</h3>
                             <p>
                                 제가 가장 자신있는 건 소통입니다. <br/>
-                                학부시절 교내/외에서 만난 수많은 사람들과의 활동들과 다년간의 서비스직을 경험해본 저는,
-                                사람들과 소통하는 것은 누구보다 자신있습니다. <br/>단순히 말을 잘 하는 사람이라는 의미가 아니라 상대방이 어떤 것을 원하는지 Needs를 잘 파악하고,
-                                긍정적인 분위기를 이끌어 가는 것에 자신있습니다. <br/>사용자 UX/UI에 적합한 기능을 구현하고, 유관부서와의 협업과 소통을 잘 이끌어 내는 'ALL ROUND PLAYER'가 되겠습니다. 
+                                학부시절 교내,외에서 다양한 활동을 경험하고 다년간의 서비스직에 종사했기 때문에
+                                사람들과 <br/> 소통하는 것은 누구보다 자신있습니다. <br/>단순히 말을 잘 하는 사람이라는 의미가 아니라 상대방이 어떤 것을 원하는지 Needs를 잘 파악하고,<br/>
+                                긍정적인 분위기를 이끌어 가는 것에 자신있습니다. <br/><br/>사용자 UX/UI에 적합한 기능을 구현하고, 유관부서와의 협업과 소통을 잘 이끌어 내는 
+                                <br/> 'ALL ROUND PLAYER'가 되겠습니다. 
                             </p>
                         </div>
                 </div>

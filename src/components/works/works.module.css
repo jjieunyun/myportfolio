@@ -2,6 +2,8 @@
 @value titleSize, Radius from '../../common/size.module.css';
 @value makerWhite,makerLightGrey,makerBrown,makerMint,makerOrange,makerGreen,makerpink,makerBlue  from '../../common/colors.module.css';
 
+
+
 .work {
     position: relative;
     color: makerBrown;
@@ -39,12 +41,16 @@
 }
 
 
+
 .slider {
     position: relative;
     padding-top: 2rem;
     margin: auto;
     width: 80%;
+    opacity: 0;
+    transform: translate3d(0, 20%, 0)translate3d(0, 20%, 0)
 }
+
 
 .card {
     position: relative;

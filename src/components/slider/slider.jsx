@@ -4,12 +4,18 @@ import "keen-slider/keen-slider.min.css"
 import  './slider.css'
 
 /* 이미지파일*/
-import example from '../../imgs/reading_log.png'
 import uptown from '../../imgs/uptown.png'
 import booklog from '../../imgs/booklog.png'
 import bookflix from '../../imgs/bookflix.png'
 import youtube from '../../imgs/youtube.png'
 import portfilio from '../../imgs/port.png'
+
+
+import gifUptown from '../../imgs/gif_uptown.gif'
+import gifPortfolio from '../../imgs/gif_portfolio.gif'
+import gifBooklog from '../../imgs/gif_booklog.gif'
+import gifYoutube from '../../imgs/gif_youtube.gif'
+import gifBookflix from '../../imgs/gif_bookflix.gif'
 
 
 import ModalUptown from '../modal/modalUptown'
@@ -22,6 +28,17 @@ import { useRef } from 'react'
 
 
     export default function Slider() {
+
+    /*썸네일을 클릭했을때 gif실행*/
+    const [startGif, setStartGif] = useState(gifUptown);
+
+    const startView = (title)=> {
+        setStartGif(null)
+        setStartGif(title)
+
+    }
+
+
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
     })
@@ -110,7 +127,7 @@ import { useRef } from 'react'
         <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide number-slide1">
                 <div className='img_container'>
-                    <img className='mainIMG' src={example} alt="" />
+                    <img className='mainIMG' src={startGif} alt="" />
                 </div>
                 <div className='slide_card'>
                     <div className='slide__bar'>
@@ -128,9 +145,9 @@ import { useRef } from 'react'
                             onClick={showModalUptown}
                         >자세히보기 ▶ README</button>
                         <div className='slide_card_buttons_innerContainer'>
-                            <button className='slide_card_contents_button_Github'
+                            <button onClick={() => window.open('https://github.com/jjieunyun/forked_uptown.git', '_blank')} className='slide_card_contents_button_Github'
                             ><i className="fa-brands fa-github"></i></button>
-                            <button className='slide_card_contents_button_ViewDemo'
+                            <button onClick={() => window.open('https://jjieunyun.github.io/uptown_demo/', '_blank')} className='slide_card_contents_button_ViewDemo'
                             ><i className="fa-solid fa-desktop"></i></button>
                         </div>
                     </div>
@@ -140,7 +157,7 @@ import { useRef } from 'react'
 
             <div className="keen-slider__slide number-slide2">
             <div className='img_container'>
-                    <img className='mainIMG' src={example} alt="" />
+                    <img className='mainIMG' src={startGif} alt="" />
                 </div>
                 <div className='slide_card'>
                     <div className='slide__bar'>
@@ -161,10 +178,10 @@ import { useRef } from 'react'
                             onClick={showModalPortfolio}
                         >자세히보기 ▶ README</button>
                         <div className='slide_card_buttons_innerContainer'>
-                            <button className='slide_card_contents_button_Github'
+                            <button onClick={() => window.open('https://github.com/jjieunyun/myportfolio.git', '_blank')} className='slide_card_contents_button_Github'
                             ><i className="fa-brands fa-github"></i></button>
                             <button className='slide_card_contents_button_ViewDemo'
-                            ><i className="fa-solid fa-desktop"></i></button>
+                            ><i onClick={() => window.open('https://jjieunyun.github.io/myportfolio/', '_blank')} className="fa-solid fa-desktop"></i></button>
                         </div>
                     </div>
                     
@@ -173,7 +190,7 @@ import { useRef } from 'react'
 
             <div className="keen-slider__slide number-slide3">
             <div className='img_container'>
-                    <img className='mainIMG' src={example} alt="" />
+                    <img className='mainIMG' src={startGif} alt="" />
                 </div>
                 <div className='slide_card'>
                     <div className='slide__bar'>
@@ -194,9 +211,9 @@ import { useRef } from 'react'
                             onClick={showModalBooklog}
                         >자세히보기 ▶ README</button>
                         <div className='slide_card_buttons_innerContainer'>
-                            <button className='slide_card_contents_button_Github'
+                            <button onClick={() => window.open('https://github.com/jjieunyun/Book_Log_maker.git', '_blank')} className='slide_card_contents_button_Github'
                             ><i className="fa-brands fa-github"></i></button>
-                            <button className='slide_card_contents_button_ViewDemo'
+                            <button onClick={() => window.open('https://jjieunyun.github.io/Book_Log_maker_demo/', '_blank')} className='slide_card_contents_button_ViewDemo'
                             ><i className="fa-solid fa-desktop"></i></button>
                         </div>
                     </div>
@@ -206,7 +223,7 @@ import { useRef } from 'react'
 
             <div className="keen-slider__slide number-slide4">
             <div className='img_container'>
-                    <img className='mainIMG' src={example} alt="" />
+                    <img className='mainIMG' src={startGif} alt="" />
                 </div>
                 <div className='slide_card'>
                     <div className='slide__bar'>
@@ -226,9 +243,9 @@ import { useRef } from 'react'
                             onClick={showModalYoubube}
                         >자세히보기 ▶ README</button>
                         <div className='slide_card_buttons_innerContainer'>
-                            <button className='slide_card_contents_button_Github'
+                            <button onClick={() => window.open('https://github.com/jjieunyun/react_youtube.git', '_blank')} className='slide_card_contents_button_Github'
                             ><i className="fa-brands fa-github"></i></button>
-                            <button className='slide_card_contents_button_ViewDemo'
+                            <button onClick={() => window.open('https://jjieunyun.github.io/react_youtube/', '_blank')} className='slide_card_contents_button_ViewDemo'
                             ><i className="fa-solid fa-desktop"></i></button>
                         </div>
                     </div>
@@ -238,7 +255,7 @@ import { useRef } from 'react'
 
             <div className="keen-slider__slide number-slide5">
             <div className='img_container'>
-                    <img className='mainIMG' src={example} alt="" />
+                    <img className='mainIMG' src={startGif} alt="" />
                 </div>
                 <div className='slide_card'>
                     <div className='slide__bar'>
@@ -258,9 +275,9 @@ import { useRef } from 'react'
                             onClick={showModalBookFlix}
                         >자세히보기 ▶ README</button>
                         <div className='slide_card_buttons_innerContainer'>
-                            <button className='slide_card_contents_button_Github'
+                            <button onClick={() => window.open('https://github.com/jjieunyun/mybookflix.git', '_blank')} className='slide_card_contents_button_Github'
                             ><i className="fa-brands fa-github"></i></button>
-                            <button className='slide_card_contents_button_ViewDemo'
+                            <button onClick={() => window.open('https://jjieunyun.github.io/mybookflix/', '_blank')} className='slide_card_contents_button_ViewDemo'
                             ><i className="fa-solid fa-desktop"></i></button>
                         </div>
                     </div>
@@ -271,19 +288,19 @@ import { useRef } from 'react'
 
         <div ref={thumbnailRef} className="keen-slider thumbnail">
             <div className="keen-slider__slide number-slide1">
-                <img src={uptown} alt="" />
+                <img onClick={()=>startView(gifUptown)} src={uptown} alt="" />
             </div>
             <div className="keen-slider__slide number-slide2">
-                <img src={portfilio} alt="" />
+                <img onClick={()=>startView(gifPortfolio)} src={portfilio} alt="" />
             </div>
             <div className="keen-slider__slide number-slide3">
-                <img src={booklog} alt="" />
+                <img onClick={()=>startView(gifBooklog)} src={booklog} alt="" />
             </div>
             <div className="keen-slider__slide number-slide4">
-                <img src={youtube} alt="" />
+                <img onClick={()=>startView(gifYoutube)} src={youtube} alt="" />
             </div>
             <div className="keen-slider__slide number-slide5">
-                <img src={bookflix} alt="" />
+                <img onClick={()=>startView(gifBookflix)} src={bookflix} alt="" />
             </div>
         </div>
         </section>

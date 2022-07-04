@@ -34,7 +34,7 @@ const ModalPortfolio = ({setModalList, divRef}) => {
                 <div className={styles.line}>
                     <h1 className={styles.content_title}>PortFolio Site</h1>
                 </div>
-                    <h3>인 포트폴리오 용도로 제작한 사이트</h3>
+                    <h3>포트폴리오 용도로 제작한 사이트</h3>
                     <div className={styles.content_box}>
                         <h2>📌Summary</h2>
                     <p>
