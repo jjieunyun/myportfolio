@@ -2,70 +2,60 @@
 @value fontLogo, fontMenu, fontHome,fontPoint from '../../common/font.module.css';
 
 .home {
+    position: relative;
     width: 100vw;
     height: 100vh;
+    background-image: url('../../imgs/backgound.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30vw 0px;
 }
 
 .div_container {
-    width: 100%;
+    display: flex;
+    width: 100vw;
     height: 100vh;
+    justify-content: space-around;
 
 }
 
-.background {
-    position: absolute;
-    top: 0px;
-    left: 30%;
-    width: 70%;
-    height: 100vh;
-    z-index: -100;
-    object-fit: cover;
+/*contents leftSide*/
+
+.avatar {
+    flex: 1;
+    margin-right: 0;
 }
 
 .title {
     position: relative;
-    top: 10vh;
-    left: -2vw;
+    top: 40%;
+    left: 45%;
     font-size: 1.5rem;
     font-family: fontLogo;
     transform: rotate(-13deg);
     color: makerBrown;
 }
 
-.avatar {
-    position: absolute;
-    top: 35%;
-    bottom:0;
-    left: 23%;
-    margin: 0;
-}
-
 .avatarIMG {
     width: 22rem;
+    position: relative;
+    top: 35%;
+    left: 45%;
 }
 
 .intro {
-    height: 60vh;
-    width: 700px;
-    position: relative;
-    top: 30%;
-    left: 50%;
-    white-space: normal;
-    word-wrap:break-word;
-    color: makerBrown;
+    flex:1;
+    display: flex;
+    align-items: center;
+    font-family: 'Black Han Sans', sans-serif;
 }
 
-.intro  h3 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin: 0;
-    font-family: fontPoint;
-}
 
+/*contents rightSide*/
 .home_cut_container{
     position: absolute;
-    top: -3rem;
-    right: 10rem;
+    top: 15%;
+    right: 50%;
     width: 20rem;
     transition: all 0.2s ease-in-out;
 }
@@ -92,7 +82,6 @@
 .first_letter {
     position: absolute;
     top: -40px;
-    /* transform: rotate(-8deg); */
     left: -0.6rem;
     z-index: 3;
     color: makerOrange;
@@ -100,117 +89,48 @@
     font-size: 1.5rem;
     font-family: fontLogo;
     -webkit-text-stroke-width: 0.03rem;
-    animation:scale 0.8s ease-in-out Infinite Alternate;
 }
 
 .second_letter {
     position: absolute;
-    right: -5rem;
+    top: 5rem;
+    right: -10rem;
     z-index: 3;
     color: makerOrange;
     text-shadow: #302f2f 1px 1px 0;
     font-size: 1.5rem;
     font-family: fontLogo;
     -webkit-text-stroke-width: 0.03rem;
-    animation:scale-2 0.8s ease-in-out Infinite Alternate;
 }
 
 
-/*오른쪽 contents영역*/
-.contents {
-    position: relative;
-    top: -10%;
-    left: -10%;
-    display: flex;
-    flex-direction: column;
-    height: 35rem;
-    justify-content: space-around;
-    width: 50rem;
-}
-
-
-.contents_box {
-    height: 8rem;
-    width: 100%;
-}
-
-.contents_box:nth-child(2n) {
-    text-align: end;
-}
-
-.contents_box:nth-child(2n) > div {
-    right: 200px;
-}
-
-.contents_box:nth-child(2n) > p {
-    position: relative;
-    right: 15%;
-}
-
-
-.point  {
-    width: 60%;
-    position: absolute;
+.point {
+    font-family: 'Black Han Sans', sans-serif;
     font-size: 4rem;
-    font-family: fontMenu;
     color: transparent;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     animation: alternate point ease-in-out infinite 1s;
     -webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: makerWhite;
+	-webkit-text-stroke-color: makerBrown;
     text-shadow:  #d7f2e776 2px 2px 4px;
     transition: all 0.2s ease-in-out;
 }
 
-
+.point:hover {
+    color: makerOrange;
+    transition: all ease-in-out 0.2s;
+}
 
 .text {
-    position: relative;
-    top: 1rem;
-    font-size:2.7rem;
-    font-family: 'Poor Story', cursive;
-    font-weight: bolder;
-}
-
-.point:hover {
-    text-shadow:  makerOrange 2px 2px 4px;
+    color: makerBrown;
+    width: 40rem;
+    font-size: 4.3rem;
+    font-family: 'Black Han Sans', sans-serif;
 }
 
 
-@keyframes line_move {
-    0% {
-        top: 0px;
-    }
-    100% {
-        top: -8px;
-    }
-}
+/*반응형*/
 
-@keyframes scale {
-    0% {
-        top: -32px;
-    }
-    100% {
-        top: -40px;
-    }
-}
-
-@keyframes scale-2 {
-    0% {
-        top:84px;
-    }
-    100% {
-        top:76px;
-        text-shadow: #302f2f 1px 1px 0;
-    }
-}
-
-@keyframes point {
-    0% {
-
-    }
-    100% {
-        transform: scale(1.01);
-    }
+@media screen and (max-width: 768px) {
 }

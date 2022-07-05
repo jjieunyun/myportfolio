@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Libre+Barcode+128+Text&family=IBM+Plex+Sans+KR&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&family=Gowun+Dodum&family=Noto+Sans:wght@300;400;500&family=Pacifico&family=Paytone+One&display=swap');
-@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic:wght@700&family=Poor+Story&family=Libre+Barcode+128+Text&family=IBM+Plex+Sans+KR&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&family=Gowun+Dodum&family=Noto+Sans:wght@300;400;500&family=Pacifico&family=Paytone+One&display=swap');
+
 
 * {
     box-sizing: border-box;
@@ -8,11 +8,8 @@
 body {
     margin: 0;
     font-family: 'Nanum Gothic', sans-serif;
-    /* font-family: 'Noto Sans KR', sans-serif; */
-    /* font-family: 'IBM Plex Sans KR', sans-serif; */
     cursor: default;
     overflow-x: hidden;
-    /* line-height: 1.5rem; */
 }
 
 html {
